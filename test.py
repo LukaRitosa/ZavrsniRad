@@ -1,15 +1,22 @@
 import requests
+from dotenv import load_dotenv
+import os
+import json
+import time
 
-url = "https://g2-data-api.p.rapidapi.com/g2-products"
+load_dotenv()
 
-querystring = {"product":"postman","max_reviews":"1000"}
+RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 
-headers = {
-	"x-rapidapi-key": "934596b695msh080ef90b49c9542p1754c1jsne5208e246c77",
-	"x-rapidapi-host": "g2-data-api.p.rapidapi.com",
-	"Content-Type": "application/json"
-}
-
-response = requests.get(url, headers=headers, params=querystring)
-
-print(response.json())
+r = requests.get(
+    "https://g2-data-api.p.rapidapi.com/g2-products",
+    headers={
+        "x-rapidapi-key": RAPIDAPI_KEY,
+        "x-rapidapi-host": "g2-data-api.p.rapidapi.com"
+    },
+    params={"product": "zoom-workplace", "max_reviews": "50"}
+)
+data = r.json()
+print("Ključevi:", list(data.keys()))
+print("Tip reviews:", type(data.get("reviews")))
+print(json.dumps(data, indent=2)[:500])
