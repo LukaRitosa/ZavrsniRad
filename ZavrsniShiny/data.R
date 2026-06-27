@@ -22,7 +22,7 @@ kriteriji <- list(
   ),
   
   "tab_assesment" = list(
-    naziv = "Assessment",
+    naziv = "Assesment",
     kriteriji = c(
       "Pre-made content",
       "Question variety",
