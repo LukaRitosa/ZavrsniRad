@@ -1,7 +1,9 @@
 .vscode/
 .venv/
 .env
-data/
+zastarijeli_data/
+zastarijeli_kod/
+# data/
 .Rproj.user
 aaa.py
 bla.py
