@@ -150,6 +150,15 @@ for filename, mapping in translations.items():
 
     df = pd.read_csv(path)
 
+    category_translation = {
+        "Assessment": "Procjena znanja",
+        "Classroom Management": "Upravljanje učionicom",
+        "Virtual Classroom": "Virtualna učionica",
+    }
+
+    if "category" in df.columns:
+        df["category"] = df["category"].replace(category_translation)
+
     df = df.rename(columns=mapping)
 
     output_path = OUTPUT / filename

@@ -173,8 +173,11 @@ function(input, output, session) {
     tezine_norm <- tezine / sum(tezine)
     names(tezine_norm) <- poredak
     
+    feature_cols <- setdiff(
+      names(df), c("naziv", "slug", "category","rating")
+    )
 
-    krit_to_col <- setNames(names(df)[-1], kat$kriteriji)
+    krit_to_col <- setNames(feature_cols, kat$kriteriji)
     cols_odabrani <- krit_to_col[poredak]
     
     df$score <- round(

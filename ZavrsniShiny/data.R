@@ -1,61 +1,59 @@
-# Ovaj fajl ćeš kasnije zamijeniti učitavanjem iz CSV-a
-# source("data.R") na vrhu server.R i ui.R
+library(readr)
+
+classroom <- read_csv(
+  "data/features_classroom_management2.csv",
+  show_col_types = FALSE
+)
+
+assessment <- read_csv(
+  "data/features_assessment2.csv",
+  show_col_types = FALSE
+)
+
+virtual <- read_csv(
+  "data/features_virtual_classroom2.csv",
+  show_col_types = FALSE
+)
+
+
+napravi_kategoriju <- function(df){
+  osnovni <- c(
+    "name",
+    "slug",
+    "category",
+    "rating"
+  )
+  
+  kriteriji <- setdiff(
+    names(df),
+    osnovni
+  )
+  
+  alati <- df
+  
+  names(alati)[names(alati)=="name"] <- "naziv"
+  
+  list(
+    naziv= unique(df$category),
+    
+    kriteriji = kriteriji,
+    
+    alati=alati,
+    
+    meta= df[, c(
+      "name",
+      "slug",
+      "category",
+      "rating"
+    )]
+  )
+}
 
 kriteriji <- list(
-  "tab_classroom" = list(
-    naziv = "Classroom Management",
-    kriteriji = c(
-      "Remote Computer Monitoring",
-      "Student Assignment Distribution",
-      "Teacher/Student Screensharing",
-      "Interactive Quizzes",
-      "Instant Messaging"
-    ),
-    alati = data.frame(
-      naziv     = c("Dyknow Classroom", "ClassDojo", "LanSchool", "Lumio"),
-      monitoring = c(97, 86, 87, 89),
-      assignment = c(82, 82, 81, 93),
-      screenshare= c(91, 85, 88, 94),
-      quizzes    = c(81, 74, 78, 92),
-      messaging  = c(90, 92, 84, 81)
-    )
-  ),
+  tab_classroom = napravi_kategoriju(classroom),
   
-  "tab_assesment" = list(
-    naziv = "Assesment",
-    kriteriji = c(
-      "Pre-made content",
-      "Question variety",
-      "Real-time assessment",
-      "Gamification",
-      "Analytics dashboard"
-    ),
-    alati = data.frame(
-      naziv      = c("Echo360", "iSpring Suite", "Kahoot!", "Mentimeter"),
-      premade    = c(92, 83, 88, 82),
-      questions  = c(91, 90, 90, 88),
-      realtime   = c(93, 86, 96, 95),
-      gamification = c(85, 79, 96, 86),
-      analytics  = c(78, 77, 91, 86)
-    )
-  ),
+  tab_assessment= napravi_kategoriju(assessment),
   
-  "tab_virtual" = list(
-    naziv = "Virtual Classroom",
-    kriteriji = c(
-      "Video Conferencing",
-      "Screen Sharing",
-      "Recording",
-      "Mobile Compatibility",
-      "Integrations"
-    ),
-    alati = data.frame(
-      naziv      = c("Zoom Workplace", "Speexx"),
-      video      = c(93, 88),
-      screenshare= c(92, 86),
-      recording  = c(90, 89),
-      mobile     = c(89, 90),
-      integrations = c(88, 89)
-    )
-  )
+  tab_virtual= napravi_kategoriju(virtual)
 )
+
