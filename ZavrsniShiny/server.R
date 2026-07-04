@@ -191,12 +191,19 @@ function(input, output, session) {
   }
   
   rez_ui <- function(df){
+    g2_link <- paste0("https://www.g2.com/products/", df$slug[1], "/reviews")
+    
     tagList(
       tags$div(
         class= "alert alert-success",
         tags$h5("Preporučeni alat:"),
         tags$h4(df$naziv[1]),
-        tags$p(paste0("SMART skor: ", df$score[1]))
+        tags$p(paste0("SMART skor: ", df$score[1])),
+        
+        tags$p(strong("Ocjena na G2: "), df$rating[1], " / 5"),
+        
+        tags$a("G2 recenzije", href = g2_link, target = "_blank", class = "btn btn-primary"
+        )
       ),
       tags$h6("Rang lista:"),
       tags$table(
