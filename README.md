@@ -32,9 +32,16 @@ bla bla višestruko odlučivanje bla bla smart metoda
 
 ### Prikupljanje i priprema podataka
 
-G2 izvor
-G2 API proizvodi
-RapidAPI feature podatci
+Izvor podataka je G2 (https://www.g2.com/). G2 je web stranica sa recenzijama poslovnih software alata, te jedna od kategorija je edukacija.
+
+G2 API se koristio za prikupljanje kategorija i alata u tim kategorijama, dok je za podatke o karakteristikama alata (recenzije za specifične funkcionalnosti) korišten scraper RapidAPI. 
+
+U koraku 1 su se prikupljale pod-kategorije edukacije, nakon prikupljanja su ručno izabrane kategorije relevantne za širu publiku nastavnika (Virtual Classroom, Assessment, Classroom Management, Study Tools, Classroom Messaging, Tutoring). U koraku 2 su se tražili alati u tim kategorijama
+
+
+-G2 izvor
+-G2 API proizvodi
+-RapidAPI feature podatci
 Python
 Odabir
 Prevođenje
