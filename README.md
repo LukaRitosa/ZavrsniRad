@@ -1,15 +1,16 @@
 # ZavrsniRad
 
-Shiny aplikacija za pomoć pri odabiru digitalnih alata za edukaciju koristeći SMART metodu 
-Shiny App for Assisting With Choosing Digital Tools for Education Utilizing the SMART Method
+# Shiny aplikacija za pomoć pri odabiru digitalnih alata za edukaciju koristeći SMART metodu 
 
-Sveučilište Juraja Dobrile u Puli
+# Shiny App for Assisting With Choosing Digital Tools for Education Utilizing the SMART Method
 
-Fakultet Informatike u Puli
+**Sveučilište:** Sveučilište Juraja Dobrile u Puli
 
-Akademska godina: 2025/2026
+**Studij:** Fakultet Informatike u Puli
 
-Operacijska istraživanja
+**Akademska godina:** 2025/2026
+
+**Kolrgij:** Operacijska istraživanja
 
 **Mertor:** doc. dr. sc. Katarina Kostelić
 
