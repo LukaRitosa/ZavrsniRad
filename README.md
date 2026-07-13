@@ -1,7 +1,5 @@
 # ZavrsniRad
 
-Shiny aplikacija za pomoć nastavnicima pri pronalasku softverskih alata za nastavu i online nastavu. Aplkacija koristi SMART metodu za prijedlog alata određene kategorije, tako da korisnik bira bitne kriterije, rangira ih i dodijeljuje koliko je puta npr. kriterij x2 važniji od kriterija x1. 
-
 Podatci su prikupljeni u Python virtualnom okruženju. 
 
 
@@ -14,8 +12,15 @@ G2API:
 
 ## Uvod
 
+U periodu digitaliziranja edukacije nastavnici su preplavljeni raznim alatima za nastavu. Cilj ovog rada je razvoj sustava za potporu odlučivanju pri odabiru nastavnih alata. 
+
+EduToolSelector (ili koji bod naziv bude bio na krau) je shiny aplikacija koristi SMART metodu za prijedlog alata određene kategorije, tako da korisnik bira bitne kriterije, rangira ih i dodijeljuje koliko je puta npr. kriterij x2 važniji od kriterija x1. 
+
+Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2 API-a i Rapid API web scraper-a.  
+
 ## Razrada 
 
+### Prikupljanje podataka
 ## Zaključak 
 
-## Literaturu
+## Literatura i izvori
