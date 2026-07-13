@@ -26,14 +26,49 @@ Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2
 
 ## Razrada 
 
-### Prikupljanje podataka
+### Teorijska podloga
+
+bla bla višestruko odlučivanje bla bla smart metoda
+
+### Prikupljanje i priprema podataka
+
+G2 izvor
+G2 API proizvodi
+RapidAPI feature podatci
+Python
+Odabir
+Prevođenje
+
+### Implementacija SMART modela
+
+Kriteriji po kategorijama
+Rank sum
+Swing weight
+Kombinacija
+
+### Shiny aplikacija
+
+Arhitektura
+Korisnički flow
+Inmplementacija
+Opis sučelja
+
 ## Zaključak 
+
+Što je ostvareno
+Ograničenja
+Moguća poboljšanja
 
 ## Literatura i izvori
 
+https://rpubs.com/kakoste/uvod_MCDM
 
 Scraper:
   https://rapidapi.com/pradeepbardiya13/api/g2-data-api
 
 G2API:
   https://documentation.g2.com/docs/developer-portal
+  
+
+
+  ## Upote korištenja
