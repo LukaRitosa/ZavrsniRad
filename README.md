@@ -4,13 +4,15 @@
 
 # Shiny App for Assisting With Choosing Digital Tools for Education Utilizing the SMART Method
 
+Luka Ritoša
+
 **Sveučilište:** Sveučilište Juraja Dobrile u Puli
 
 **Studij:** Fakultet Informatike u Puli
 
 **Akademska godina:** 2025/2026
 
-**Kolrgij:** Operacijska istraživanja
+**Kolegij:** Operacijska istraživanja
 
 **Mertor:** doc. dr. sc. Katarina Kostelić
 
