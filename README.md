@@ -1,14 +1,17 @@
 # ZavrsniRad
 
-Podatci su prikupljeni u Python virtualnom okruženju. 
+Shiny aplikacija za pomoć pri odabiru digitalnih alata za edukaciju koristeći SMART metodu 
+Shiny App for Assisting With Choosing Digital Tools for Education Utilizing the SMART Method
 
+Sveučilište Juraja Dobrile u Puli
 
-Scraper:
-  https://rapidapi.com/pradeepbardiya13/api/g2-data-api
+Fakultet Informatike u Puli
 
-G2API:
-  https://documentation.g2.com/docs/developer-portal
+Akademska godina: 2025/2026
 
+Operacijska istraživanja
+
+**Mertor:** doc. dr. sc. Katarina Kostelić
 
 ## Uvod
 
@@ -24,3 +27,10 @@ Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2
 ## Zaključak 
 
 ## Literatura i izvori
+
+
+Scraper:
+  https://rapidapi.com/pradeepbardiya13/api/g2-data-api
+
+G2API:
+  https://documentation.g2.com/docs/developer-portal
