@@ -10,3 +10,12 @@ Scraper:
 
 G2API:
   https://documentation.g2.com/docs/developer-portal
+
+
+## Uvod
+
+## Razrada 
+
+## Zaključak 
+
+## Literaturu
