@@ -44,32 +44,57 @@ Korak 7 je bio korak prevođenja naziva kategorija i funkcionalnosti na hrvatski
 
 Prijevodi:
   "Assessment": "Procjena znanja"
+  
         "Administration | Mobile compatibility": "Prilagođeno mobilnim uređajima",
+        
         "Administration | White-labeling": "Prilagodba izgleda",
+        
         "Assessment delivery | Pre-made content": "Gotovi sadržaji",
+        
         "Assessment delivery | Question variety": "Raznolikost vrsta pitanja",
+        
         "Assessment delivery | Real-time assessment": "Procjena u stvarnom vremenu",
+        
         "Grading and reporting | Analytics dashboard": "Analitika",
+        
         "Grading and reporting | Gamification": "Elementi igre"
 
+
   "Classroom Management": "Upravljanje učionicom",
+  
         "Platform Features | Instant Messaging": "Razmjena poruka u stvarnom vremenu",
+        
         "Platform Features | Interactive Quizzes": "Interaktivni kvizovi",
+        
         "Platform Features | Remote Computer Monitoring": "Praćenja rada",
+        
         "Platform Features | Student Assignment Distribution": "Dodjela zadataka",
+        
         "Platform Features | Teacher/Student Screensharing": "Djeljenje zaslona"
+
             
   "Virtual Classroom": "Virtualna učionica"
+  
         "Collaboration | Hand Raising": "Dizanje ruke",
+        
         "Collaboration | Participation Controls": "Upravljanje sudjelovanjem",
+        
         "Collaboration | Screen Sharing": "Dijeljenje zaslona",
+        
         "Collaboration | Survey Tools": "Alati za ankete",
+        
         "Collaboration | Whiteboard": "Digitalna ploča",
+        
         "Content Sharing | File Sharing": "Dijeljenje datoteka",
+        
         "Content Sharing | Session Recording": "Snimanje sastanka/nastave",
+        
         "Content Sharing | Video Streaming": "Prijenos videa uživo",
+        
         "Functionality | Live Chat": "Slanje poruka",
+        
         "Functionality | Markup Tools": "Alati za označavanje",
+        
         "Functionality | Technical Support": "Tehnička podrška"
   
 
