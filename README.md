@@ -98,13 +98,7 @@ Prijevodi:
         "Functionality | Technical Support": "Tehnička podrška"
   
 
-
--G2 izvor
--G2 API proizvodi
--RapidAPI feature podatci
-Python
-Odabir
-Prevođenje
+Zadnji korak je bio prenosenje prevedenih podataka u Shiny okruženje.
 
 ### Implementacija SMART modela
 
