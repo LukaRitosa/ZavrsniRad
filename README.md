@@ -109,16 +109,19 @@ Zadnji korak je bio prenošenje prevedenih podataka u Shiny okruženje.
 Kriteriji za svaku kategoriju preuzeti su iz G2 _detailed_features_ podataka, svaka funkcionalnost ima postotak zadovoljnih korisnika temeljen na stvarnim recenzijama. Ti postotci (0-100) koriste se direktno kao vrijednost alternativa u SMART modelu, što eliminira potrebu za ručnom normalizacijom podataka.
 
 **Odabir kriterija**
+
 Prvi korak omogućuje korisniku odabir kriterija koje želi uzeti u obzir pri odlučivanju. Time se iz analize mogu isključiti funkcionalnosti koje korisniku nisu važne.
 
 *_screenshot_
 
 **Rangiranje kriterija**
+
 Nakon odabira kriterija korisnik ih raspoređuje metodom _drag and drop_ od najvažnijeg prema najmanje važnom. Dobivani korak koristi se kao osnova za određivanje relativnih režina kriterija.
 
 *_screenshot_
 
 **Određivanje težina (Swing Weighting)**
+
 Samo rangiranje ne govori koliko je jedan kriterij važniji od drugoga, korisnik zatim određuje omjer važnosti između susjednih kriterija. Za svaki par kriterija odgovara na pitanje "Koliko Vam je kriterij A bitniji od kriterija B?", odgovori se izražavaju u omjerima 2-10.
 
 Na temelju omjera izračunavaju se težine kriterija. Izračun započinje od posljednjeg kriterija kojem se dodjeljuje početna vrijednost 10, nakon čega se težine računaju unatrag množenjem s odabranim omjerima:
@@ -136,6 +139,7 @@ Na temelju omjera izračunavaju se težine kriterija. Izračun započinje od pos
 
 
 **Rezultat**
+
 Nakon određivanja normaliziranih težina, za svaki alat računa se ukupni SMART rezultat. Svaka funkcionalnost alata množi se pripadajućom težinom kriterija, a zatim se svi umnošci zbrajaju. Budući da su vrijednosti kriterija izražene kao postotak zadovoljnih korisnika, nije bila potrebna dodatna normalizacija podataka. Alat s najvećim ukupnim rezultatom smatra se najprikladnijim izborom za zadane korisničke preferencije.
 Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno prema ostvarenom rezultatu te se korisniku prikaže preporučeni alat (sa linkom na G2 stranicu alata i G2 recenzijom alata) zajedno sa kompletnom rang-listom.
 
@@ -144,12 +148,14 @@ Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno 
 ### Shiny aplikacija
 
 **Arhitektura**
+
 Aplikacija je razvijena korištenjem programskog jezika R i paketa **Shiny**, dok jwe za _drag and drop_ funkcionalnost korišten paket **sortable**. Implementacija je podijeljena u 3 glavne datoteke:
 - **ui.R** definira korisničko sučelje
 - **server.R** sadrži logiku aplikacije, implementaciju SMART metode i reakcije na korisničke akcije
 - **data.R** učitava CSV datoteke i priprema podatke za prikaz u aplikaciji
 
 **Dinamičko generiranje korisničkog sučelja**
+
 Jedna od glavnih karakteristika aplikacije je da korisničko sučelje nije ručno izrađeno za svaku kategoriju alata, već se generira dinamički iz učitanih podataka.
 Nakon učitavanja CSV datoteka u datoteci **data.R** korištenjem funkcije _lapply()_ iz tih se podataka automatski stvaraju:
 - gumbovi za odabir kategorije
@@ -161,6 +167,7 @@ Nakon učitavanja CSV datoteka u datoteci **data.R** korištenjem funkcije _lapp
 Na taj način aplikcija nije vezana uz unaprijed definirani broj kategorija/kriterija. Dodavanjem nove CSV datoteke odgovarajuće strukture moguće je proširiti aplikaciju bez izmjena korisničkog sučelja.
 
 **_User flow_**
+
 Korisnik prolazi kroz četiri uzastopn koraka:
 1. odabir kriterija
 2. rangiranje kriterija
