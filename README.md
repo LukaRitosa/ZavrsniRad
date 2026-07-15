@@ -28,7 +28,9 @@ Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2
 
 ### Teorijska podloga
 
-bla bla višestruko odlučivanje bla bla smart metoda
+**Višekriterijsko odlučivanje** je grana operacijskih istraživanja koja se bavi metodama za odabir između više alternativa prema više kriterija istovremeno. Za ratliku od jednokriterijskih problema optimizacije, u svarnim situacijama odluke se rijetko donose prema donose prema samo jednom cilju - nastavnik koji bira digitalni alat za nastavu uzima u obzir više faktora.
+
+**SMART** (engl. _Simple Multi-Atribute Technique_) metodu razvio je Edwards 1971. Njena jednostavnost proizlazi iz direktonog ocjenjivanja alternativa iu korištenje prirodne mjerne ljestvice, vaganja kriterija i odvajanja alternativa kriterija. Prednost metode je upotreba linearne funkcije kao funkcije vrijednosti, jednostavnost, odluka koja je nezavisna od alternativa i robustnost na promjene alternativa. Dok su nedostatci povećanje kompleksnisti kod povećanja broja kriterija, brzo odbacivanje nisko rangiranih alternativa, problematično određivanje odgovarajućih vaganja i nekonzistentnost zbog subjektivnog pristupa provedbi metode.
 
 ### Prikupljanje i priprema podataka
 
@@ -132,4 +134,4 @@ G2API:
   
 
 
-  ## Upote korištenja
+  ## Upute korištenja
