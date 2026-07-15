@@ -126,6 +126,8 @@ Moguća poboljšanja
 
 https://rpubs.com/kakoste/uvod_MCDM
 
+Edwards, W., & Barron, F. H. (1994). SMARTS and SMARTER: Improved simple methods for multiattribute utility measurement. Organizational Behavior and Human Decision Processes, 60(3), 306–325.
+
 Scraper:
   https://rapidapi.com/pradeepbardiya13/api/g2-data-api
 
