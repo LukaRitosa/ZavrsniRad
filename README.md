@@ -176,9 +176,22 @@ Korisnik prolazi kroz četiri uzastopn koraka:
 
 ## Zaključak 
 
-Što je ostvareno
-Ograničenja
-Moguća poboljšanja
+Cilj ovog rada bio je razviti sustav za potporu u odlučivanju koji nastavnicima olkšava odabir digitalnih alata za nastavu primjenom SMART metode višekriterijskog odlučivanja. Razvijena je Shiny aplikacija koja korisniku omogućuje odabir alata, definiranje kriterija, njihovo rangiranje i određivanje relativne važnosti, nakon čega se izračuna rang-lista dostupnih alata te prikazuje najprikladnija alternativa.
+
+Intuitivna je i jenostavna je za korištenje. Kategorije i kriteriji su prevedeni na jezik poznat široj skupini nastavnika. Aplikaicja je flekibilna na proširenje podataka.
+
+**Ograničenja**
+
+Zbog ograničenja besplatnih verzija oba korištena API-a nije moguće dobiti podatke u stvarnom vremenu, nego samo slike podataka u određenom vremenu. Ukoliko se ažurirnjem alata promijene mišljenja korisnika ili pojave novi relevantni alati na G2 aplikacija neće predstavljati relevantnu sliku stvarnosti.
+
+**Moguća poboljšanja**
+
+Moguča poboljšanja:
+
+- dinamičko prikupljanje podataka
+- proširenje kategorija
+- aplikacija koja služi za prijedlog bilo koje kategorije
+- usporedba SMART metode s drugim metodama višekriterijskog odlučivanja
 
 ## Literatura i izvori
 
