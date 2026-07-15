@@ -1,10 +1,11 @@
-# ZavrsniRad
-
 # Shiny aplikacija za pomoć pri odabiru digitalnih alata za edukaciju koristeći SMART metodu 
 
 # Shiny App for Assisting With Choosing Digital Tools for Education Utilizing the SMART Method
 
 Luka Ritoša
+
+<img width="2664" height="700" alt="slika" src="https://github.com/user-attachments/assets/dd51b9a2-8d6e-45fa-84a2-2e175dde0986" />
+
 
 **Sveučilište:** Sveučilište Juraja Dobrile u Puli
 
@@ -137,16 +138,34 @@ Na temelju omjera izračunavaju se težine kriterija. Izračun započinje od pos
 
 **Rezultat**
 Nakon određivanja normaliziranih težina, za svaki alat računa se ukupni SMART rezultat. Svaka funkcionalnost alata množi se pripadajućom težinom kriterija, a zatim se svi umnošci zbrajaju. Budući da su vrijednosti kriterija izražene kao postotak zadovoljnih korisnika, nije bila potrebna dodatna normalizacija podataka. Alat s najvećim ukupnim rezultatom smatra se najprikladnijim izborom za zadane korisničke preferencije.
-Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno prema ostvarenom rezultatu te se korisniku prikaže preporučeni alat (sa linkom na G2 stranicu alata) zajedno sa kompletnom rang-listom.
+Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno prema ostvarenom rezultatu te se korisniku prikaže preporučeni alat (sa linkom na G2 stranicu alata i G2 recenzijom alata) zajedno sa kompletnom rang-listom.
 
 *_screenshot_
 
 ### Shiny aplikacija
 
-Arhitektura
-Korisnički flow
-Inmplementacija
-Opis sučelja
+**Arhitektura**
+Aplikacija je razvijena korištenjem programskog jezika R i paketa **Shiny**, dok jwe za _drag and drop_ funkcionalnost korišten paket **sortable**. Implementacija je podijeljena u 3 glavne datoteke:
+- **ui.R** definira korisničko sučelje
+- **server.R** sadrži logiku aplikacije, implementaciju SMART metode i reakcije na korisničke akcije
+- **data.R** učitava CSV datoteke i priprema podatke za prikaz u aplikaciji
+
+**Dinamičko generiranje korisničkog sučelja**
+Jedna od glavnih karakteristika aplikacije je da korisničko sučelje nije ručno izrađeno za svaku kategoriju alata, već se generira dinamički iz učitanih podataka.
+Nakon učitavanja CSV datoteka u datoteci **data.R** korištenjem funkcije _lapply()_ iz tih se podataka automatski stvaraju:
+- gumbovi za odabir kategorije
+- karice (tabovi) za svaku kategoriju
+- popis kriterija
+- elementi ta rangiranje kriterija
+- elementi za određivanje težina
+Na taj način aplikcija nije vezana uz unaprijed definirani broj kategorija/kriterija. Dodavanjem nove CSV datoteke odgovarajuće strukture moguće je proširiti aplikaciju bez izmjena korisničkog sučelja.
+
+**_User flow_**
+Korisnik prolazi kroz četiri uzastopn koraka:
+1. odabir kriterija
+2. rangiranje kriterija
+3. određivanje omjera važnosti između kriterija
+4. prikaz preporučenih alata i kompletne rang-liste
 
 ## Zaključak 
 
