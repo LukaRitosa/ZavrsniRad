@@ -157,6 +157,7 @@ Nakon učitavanja CSV datoteka u datoteci **data.R** korištenjem funkcije _lapp
 - popis kriterija
 - elementi ta rangiranje kriterija
 - elementi za određivanje težina
+
 Na taj način aplikcija nije vezana uz unaprijed definirani broj kategorija/kriterija. Dodavanjem nove CSV datoteke odgovarajuće strukture moguće je proširiti aplikaciju bez izmjena korisničkog sučelja.
 
 **_User flow_**
