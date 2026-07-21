@@ -28,13 +28,43 @@ Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2
 
 ### Teorijska podloga
 
-Kod problema odabira digitlnih nastavnih alata nastavnici pri odabiru ne razmatraju samo jednu karakteristiku alata, već istodobno uzimaju u obzir više međusobno različitih kriterija. Budući da neki alati mogu biti bolji prema jednom, a lošiji prema drugom kriteriju, nije moguće odrediti najbolju alternativu promatrajuči samo jednu značajku, što ovaj prblem čini problemom višekriterijskog odlučivanja.
+Kod problema odabira digitlnih nastavnih alata nastavnici pri odabiru ne razmatraju samo jednu karakteristiku alata, već istodobno uzimaju u obzir više međusobno različitih kriterija. Budući da neki alati mogu biti bolji prema jednom, a lošiji prema drugom kriteriju, nije moguće odrediti najbolju alternativu promatrajuči samo jednu značajku, što ovaj problem čini problemom višekriterijskog odlučivanja.
 
-**Višekriterijsko odlučivanje** je grana operacijskih istraživanja koja se bavi metodama za odabir između više alternativa prema više kriterija istovremeno. Za razliku od jednokriterijskih problema optimizacije, u svarnim situacijama odluke se rijetko donose prema donose prema samo jednom cilju - nastavnik koji bira digitalni alat za nastavu uzima u obzir više faktora.
+**Višekriterijsko odlučivanje** je grana operacijskih istraživanja koja se bavi metodama za odabir između više alternativa prema više kriterija istovremeno. Za razliku od jednokriterijskih problema optimizacije, u svarnim situacijama odluke se rijetko donose prema donose prema samo jednom cilju. Cilj metoda višekriterijskog odlučivanja nije pronaći univerzalno najbolju alternativu, već onu koja najbolje odgovara preferencama donositelja odluke.
 
-Prilikom odabira metode višekriterijskog odlučivanja potrebno je uzeti u obzir karakteristike problema te odabrati metodu koja je dovoljno jednostavna za primjenu, ali istovremeno omogućuje pouzdano donošenje odluka. Prema Saaty i Ergu (2015) metoda je loše odabrana ukoliko je njena logika komplicirana i mogu ju razumijeti samo eksperti u donošenju odluka, odnosno dobro odabrana metoda je razumljiva i može se implementirati sa strane većine korisnika u praksi, što je razlog odabira SMART metode. 
+Prilikom odabira metode višekriterijskog odlučivanja potrebno je uzeti u obzir karakteristike problema te odabrati metodu koja je dovoljno jednostavna za primjenu, ali istovremeno omogućuje pouzdano donošenje odluka. Prema Saaty i Ergu (2015) metoda je loše odabrana ukoliko je njena logika komplicirana i mogu ju razumijeti samo eksperti u donošenju odluka, odnosno dobro odabrana metoda je razumljiva i može se implementirati sa strane većine korisnika u praksi. Iz tog razloga je odabrana SMART metoda, koja predstavlja jednostavan, ali učinkovit pristup riješenja ovakvih problema. 
 
-**SMART** (engl. _Simple Multi-Atribute Technique_) metodu razvio je Edwards 1971. Njena jednostavnost proizlazi iz direktonog ocjenjivanja alternativa iu korištenje prirodne mjerne ljestvice, vaganja kriterija i odvajanja alternativa kriterija. Prednost metode je upotreba linearne funkcije kao funkcije vrijednosti, jednostavnost, odluka koja je nezavisna od alternativa i robustnost na promjene alternativa. Dok su nedostatci povećanje kompleksnisti kod povećanja broja kriterija, brzo odbacivanje nisko rangiranih alternativa, problematično određivanje odgovarajućih vaganja i nekonzistentnost zbog subjektivnog pristupa provedbi metode.
+**SMART** (engl. _Simple Multi-Atribute Technique_) metodu razvio je Edwards 1971, dok su Edwards i Barron (1994) kasnije predstavili unaprijeđenje inačice SMARTS i SMARTER. Metoda se temelji na određivanju težina kriterija te izračunu ukupne vrijednosti svake alternative kao ponderiranog zbroja njezinih vrijednosti prema odabranim kriterijima. Zbog jednostavne implementacije, transparentnosti odabira alternativa i lako razuljivih rezultata SMART metoda često se koristi u problemima odabira alternativa i sustavima za potporu olučivanju (Olson, 1996; Patel i sur., 2017). 
+
+Prednost metode je upotreba linearne funkcije kao funkcije vrijednosti, jednostavnost, odluka koja je nezavisna od alternativa i robustnost na promjene alternativa. Dok su nedostatci povećanje kompleksnisti kod povećanja broja kriterija, brzo odbacivanje nisko rangiranih alternativa, problematično određivanje odgovarajućih vaganja i nekonzistentnost zbog subjektivnog pristupa provedbi metode.
+
+
+#### Matematičke formule korištene u radu
+
+**Izračun težina kriterija**
+
+Početna težina posljednjeg kriterija postavlja se na vrijednost 10:
+
+$$
+W_n = 10
+$$
+
+Težine ostalih kriterija računaju se unatrag korištenjem omjera važnpsti koje odredi korisnik:
+
+$$
+W_i = W_{i+1} · r_i
+$$
+
+gdje je:
+
+- $W_i$ početna težina kriterija,
+- $r_i$ omjer važnosti između susjednih kriterija koji određuje korisnik.
+
+Dobivene težine zatim se normaliziraju kako bi njihov zbroj bio jednak 1:
+
+$$
+w_i = \frac{W_i}{\sum_{j=1}^{n} W_j}
+$$
 
 
 ### Prikupljanje i priprema podataka
@@ -98,33 +128,6 @@ Nakon određivanja normaliziranih težina, za svaki alat računa se ukupni SMART
 Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno prema ostvarenom rezultatu te se korisniku prikaže preporučeni alat (sa linkom na G2 stranicu alata i G2 recenzijom alata) zajedno sa kompletnom rang-listom.
 
 *_screenshot_
-
-#### Matematičke formule korištene u radu
-
-**Izračun težina kriterija**
-
-Početna težina posljednjeg kriterija postavlja se na vrijednost 10:
-
-$$
-W_n = 10
-$$
-
-Težine ostalih kriterija računaju se unatrag korištenjem omjera važnpsti koje odredi korisnik:
-
-$$
-W_i = W_{i+1} · r_i
-$$
-
-gdje je:
-
-- $W_i$ početna težina kriterija,
-- $r_i$ omjer važnosti između susjednih kriterija koji određuje korisnik.
-
-Dobivene težine zatim se normaliziraju kako bi njihov zbroj bio jednak 1:
-
-$$
-w_i = \frac{W_i}{\sum_{j=1}^{n} W_j}
-$$
 
 
 **Izračun SMART rezultata:**
@@ -202,6 +205,10 @@ https://rpubs.com/kakoste/uvod_MCDM
 (pristupljeno 21.7.2026.)
 
 Edwards, W., & Barron, F. H. (1994). SMARTS and SMARTER: Improved simple methods for multiattribute utility measurement. Organizational Behavior and Human Decision Processes, 60(3), 306–325.
+
+Olson, D. L. (1996). Decision aids for selection problems. Journal of the Operational Research Society, 48(5), 541-542. 
+
+Patel, M. R., Vashi, M. P., & Bhatt, B. V. (2017). SMART–Multi-criteria decision-making technique for use in planning activities. New Horizons in Civil Engineering (NHCE 2017), 1–6.
 
 Saaty, T. L. and Ergu, D. (2015). When is a decision-making method trustworthy? Criteria for
 evaluating multi-criteria decision-making methods. International Journal of Information Technol-
