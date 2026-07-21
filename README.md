@@ -36,15 +36,9 @@ Prilikom odabira metode višekriterijskog odlučivanja potrebno je uzeti u obzir
 
 **SMART** (engl. _Simple Multi-Atribute Technique_) metodu razvio je Edwards 1971. Njena jednostavnost proizlazi iz direktonog ocjenjivanja alternativa iu korištenje prirodne mjerne ljestvice, vaganja kriterija i odvajanja alternativa kriterija. Prednost metode je upotreba linearne funkcije kao funkcije vrijednosti, jednostavnost, odluka koja je nezavisna od alternativa i robustnost na promjene alternativa. Dok su nedostatci povećanje kompleksnisti kod povećanja broja kriterija, brzo odbacivanje nisko rangiranih alternativa, problematično određivanje odgovarajućih vaganja i nekonzistentnost zbog subjektivnog pristupa provedbi metode.
 
-Težine kriterija normaliziraju se izrazom:
+#### Matematičke formule korištene u radu
 
-$$
-w_i=\frac{W_i}{\sum_{j=1}^{n}W_j}
-$$
-
-pri čemu je $W_i$ početna težina kriterija, a $w_i$ normalizirana težina.
-
-izračun SMART rezultata:
+**Izračun SMART rezultata:**
 
 Ukupna vrijednost alternative računa se kao:
 
@@ -58,7 +52,7 @@ gdje je:
 - $v_i(a)$ – vrijednost alternative prema kriteriju $i$,
 - $S(a)$ – ukupni SMART rezultat alternative.
 
-Swing weighting:
+**Swing weighting za određivanje težina:**
 
 Početna težina posljednjeg kriterija postavlja se na:
 
@@ -79,6 +73,8 @@ Nakon toga težine se normaliziraju:
 $$
 w_i=\frac{W_i}{\sum_{j=1}^{n}W_j}
 $$
+
+**Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pas u sve vrijednosti već izražene na istoj mjernoj ljestvici.
 
 ### Prikupljanje i priprema podataka
 
