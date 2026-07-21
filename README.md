@@ -67,8 +67,15 @@ $$
 **Izračun SMART rezultata:**
 
 $$
-S_k = \sum_{i=1}^{n} w_i' x_{ki}
+S_k=\sum_{i=1}^{n} w_i \cdot x_{ki}
 $$
+
+gdje je:
+
+- $S_k$ ukupni SMART rezultat alternative,
+- $w_i$ normalizirana težina kriterija,
+- $x_{ki}$ vrijednost alternative prema kriteriju $i$.
+- $n$ nroj odabranih kriterija
 
 
 **Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pas u sve vrijednosti već izražene na istoj mjernoj ljestvici.
