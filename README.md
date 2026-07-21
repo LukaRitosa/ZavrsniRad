@@ -43,13 +43,13 @@ Prilikom odabira metode višekriterijskog odlučivanja potrebno je uzeti u obzir
 Početna težina posljednjeg kriterija postavlja se na vrijednost 10:
 
 $$
-w_n = 10
+W_n = 10
 $$
 
 Težine ostalih kriterija računaju se unatrag korištenjem omjera važnpsti koje odredi korisnik:
 
 $$
-w_i = w_{i+1} · r_i
+W_i = W_{i+1} · r_i
 $$
 
 gdje je:
@@ -60,7 +60,7 @@ gdje je:
 Dobivene težine zatim se normaliziraju kako bi njihov zbroj bio jednak 1:
 
 $$
-w_i' = \frac{w_i}{\sum_{j=1}^{n} w_j}
+w_i = \frac{W_i}{\sum_{j=1}^{n} W_j}
 $$
 
 
