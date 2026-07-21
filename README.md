@@ -36,49 +36,6 @@ Prilikom odabira metode višekriterijskog odlučivanja potrebno je uzeti u obzir
 
 **SMART** (engl. _Simple Multi-Atribute Technique_) metodu razvio je Edwards 1971. Njena jednostavnost proizlazi iz direktonog ocjenjivanja alternativa iu korištenje prirodne mjerne ljestvice, vaganja kriterija i odvajanja alternativa kriterija. Prednost metode je upotreba linearne funkcije kao funkcije vrijednosti, jednostavnost, odluka koja je nezavisna od alternativa i robustnost na promjene alternativa. Dok su nedostatci povećanje kompleksnisti kod povećanja broja kriterija, brzo odbacivanje nisko rangiranih alternativa, problematično određivanje odgovarajućih vaganja i nekonzistentnost zbog subjektivnog pristupa provedbi metode.
 
-#### Matematičke formule korištene u radu
-
-**Izračun težina kriterija**
-
-Početna težina posljednjeg kriterija postavlja se na vrijednost 10:
-
-$$
-W_n = 10
-$$
-
-Težine ostalih kriterija računaju se unatrag korištenjem omjera važnpsti koje odredi korisnik:
-
-$$
-W_i = W_{i+1} · r_i
-$$
-
-gdje je:
-
-- $W_i$ početna težina kriterija,
-- $r_i$ omjer važnosti između susjednih kriterija koji određuje korisnik.
-
-Dobivene težine zatim se normaliziraju kako bi njihov zbroj bio jednak 1:
-
-$$
-w_i = \frac{W_i}{\sum_{j=1}^{n} W_j}
-$$
-
-
-**Izračun SMART rezultata:**
-
-$$
-S_k=\sum_{i=1}^{n} w_i \cdot x_{ki}
-$$
-
-gdje je:
-
-- $S_k$ ukupni SMART rezultat alternative,
-- $w_i$ normalizirana težina kriterija,
-- $x_{ki}$ vrijednost alternative prema kriteriju $i$.
-- $n$ nroj odabranih kriterija
-
-
-**Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pas u sve vrijednosti već izražene na istoj mjernoj ljestvici.
 
 ### Prikupljanje i priprema podataka
 
@@ -192,6 +149,52 @@ Nakon određivanja normaliziranih težina, za svaki alat računa se ukupni SMART
 Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno prema ostvarenom rezultatu te se korisniku prikaže preporučeni alat (sa linkom na G2 stranicu alata i G2 recenzijom alata) zajedno sa kompletnom rang-listom.
 
 *_screenshot_
+
+#### Matematičke formule korištene u radu
+
+**Izračun težina kriterija**
+
+Početna težina posljednjeg kriterija postavlja se na vrijednost 10:
+
+$$
+W_n = 10
+$$
+
+Težine ostalih kriterija računaju se unatrag korištenjem omjera važnpsti koje odredi korisnik:
+
+$$
+W_i = W_{i+1} · r_i
+$$
+
+gdje je:
+
+- $W_i$ početna težina kriterija,
+- $r_i$ omjer važnosti između susjednih kriterija koji određuje korisnik.
+
+Dobivene težine zatim se normaliziraju kako bi njihov zbroj bio jednak 1:
+
+$$
+w_i = \frac{W_i}{\sum_{j=1}^{n} W_j}
+$$
+
+
+**Izračun SMART rezultata:**
+
+Nakon određivanja normaliziranih težina za svaki alat izračunava se ukupni SMART rezultat kao ponderirani zbroj vrijednosti svih odabranih kriterija:
+
+$$
+S_k=\sum_{i=1}^{n} w_i \cdot x_{ki}
+$$
+
+gdje je:
+
+- $S_k$ ukupni SMART rezultat alternative,
+- $w_i$ normalizirana težina kriterija,
+- $x_{ki}$ vrijednost alternative prema kriteriju $i$.
+- $n$ broj odabranih kriterija
+
+
+**Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pas u sve vrijednosti već izražene na istoj mjernoj ljestvici.
 
 ### Shiny aplikacija
 
