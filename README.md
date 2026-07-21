@@ -38,41 +38,12 @@ Prilikom odabira metode višekriterijskog odlučivanja potrebno je uzeti u obzir
 
 #### Matematičke formule korištene u radu
 
-**Izračun SMART rezultata:**
+**Izračun težina kriterija**
+Početna težina posljednjeg kriterija postavlja se na vrijednost 10.
 
-Ukupna vrijednost alternative računa se kao:
-
-$$
-S(a)=\sum_{i=1}^{n} w_i \cdot v_i(a)
-$$
-
-gdje je:
-
-- $w_i$ – normalizirana težina kriterija,
-- $v_i(a)$ – vrijednost alternative prema kriteriju $i$,
-- $S(a)$ – ukupni SMART rezultat alternative.
-
-**Swing weighting za određivanje težina:**
-
-Početna težina posljednjeg kriterija postavlja se na:
-
-$$
-W_n = 10
-$$
-
-Za ostale kriterije težine se računaju unatrag:
-
-$$
-W_i = W_{i+1}\cdot r_i,\qquad i=n-1,\ldots,1
-$$
-
-gdje je $r_i$ omjer važnosti koji određuje korisnik.
-
-Nakon toga težine se normaliziraju:
-
-$$
-w_i=\frac{W_i}{\sum_{j=1}^{n}W_j}
-$$
+$
+w_n = 10
+$
 
 **Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pas u sve vrijednosti već izražene na istoj mjernoj ljestvici.
 
