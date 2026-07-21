@@ -56,7 +56,7 @@ Deteljniji postupak prevođenja i prijevodi: https://github.com/LukaRitosa/Zavrs
 
 Zadnji korak je bio prenošenje prevedenih podataka u Shiny okruženje.
 
-**Napomena:** zbog ograničenja besplatnih verzija API servisa podaci se ne dohvaćaju dinamički pri svakom pokretanju aplikacije. Nakon završetka procesa prikupljanja i obrade podaci su spremljeni u CSV datoteke koje se učitavaju lokalno.
+**Napomena:** zbog ograničenja besplatnih verzija API servisa podaci se ne dohvaćaju dinamički pri svakom pokretanju aplikacije. Nakon završetka procesa prikupljanja i obrade podaci su spremljeni u CSV datoteke koje se učitavaju lokalno. Stoga splikacija predstavlja **_proof-of-concept_** kojim se demostrira mogućnost primjene SMART metode u odabiru digitalnih alata za edukaciju, dok bi produkcijska verzija trebala uključiti automatsko dohvaćanje i redovito ažuriranje podataka.
 
 ### Implementacija SMART modela
 
@@ -176,9 +176,11 @@ Korisnik prolazi kroz četiri uzastopn koraka:
 
 ## Zaključak 
 
-Cilj ovog rada bio je razviti sustav za potporu u odlučivanju koji nastavnicima olkšava odabir digitalnih alata za nastavu primjenom SMART metode višekriterijskog odlučivanja. Razvijena je Shiny aplikacija koja korisniku omogućuje odabir alata, definiranje kriterija, njihovo rangiranje i određivanje relativne važnosti, nakon čega se izračuna rang-lista dostupnih alata te prikazuje najprikladnija alternativa.
+Cilj ovog rada bio je razviti aplikaciju za potporu u odlučivanju koji nastavnicima olkšava odabir digitalnih alata za nastavu primjenom SMART metode višekriterijskog odlučivanja. Razvijena je Shiny aplikacija koja korisniku omogućuje uži odabir alata, biranje (subjektivno?) relevantnih kriterija, njihovo rangiranje i određivanje relativne važnosti, nakon čega se izračunava rang-lista dostupnih alata te prikazuje najprikladnija alternativa.
 
-Intuitivna je i jenostavna je za korištenje. Kategorije i kriteriji su prevedeni na jezik poznat široj skupini nastavnika. Aplikaicja je flekibilna na proširenje podataka.
+Prilikom prevođenja kategorija i kriterija nastojalo se koristiti terminologiju koja je uobičajena i razuljiva ciljanoj skupini korisnika - nastavnicima u Republici Hrvatskoj.
+
+Arhitektura aplikacije omogućuje jednostavno proširenje novim kategorijama i alatima dodavanjem odgovarajućih CSV datoteka, bez potrebe za značajnim izmjenama korisničkog sučelja ili implementacije SMART modela.
 
 **Ograničenja**
 
