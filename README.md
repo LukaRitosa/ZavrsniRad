@@ -28,9 +28,57 @@ Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2
 
 ### Teorijska podloga
 
+Kod problema odabira digitlnih nastavnih alata nastavnici pri odabiru ne razmatraju samo jednu karakteristiku alata, već istodobno uzimaju u obzir više međusobno različitih kriterija. Budući da neki alati mogu biti bolji prema jednom, a lošiji prema drugom kriteriju, nije moguće odrediti najbolju alternativu promatrajuči samo jednu značajku, što ovaj prblem čini problemom višekriterijskog odlučivanja.
+
 **Višekriterijsko odlučivanje** je grana operacijskih istraživanja koja se bavi metodama za odabir između više alternativa prema više kriterija istovremeno. Za razliku od jednokriterijskih problema optimizacije, u svarnim situacijama odluke se rijetko donose prema donose prema samo jednom cilju - nastavnik koji bira digitalni alat za nastavu uzima u obzir više faktora.
 
+Prilikom odabira metode višekriterijskog odlučivanja potrebno je uzeti u obzir karakteristike problema te odabrati metodu koja je dovoljno jednostavna za primjenu, ali istovremeno omogućuje pouzdano donošenje odluka. Prema Saaty i Ergu (2015) metoda je loše odabrana ukoliko je njena logika komplicirana i mogu ju razumijeti samo eksperti u donošenju odluka, odnosno dobro odabrana metoda je razumljiva i može se implementirati sa strane većine korisnika u praksi, što je razlog odabira SMART metode. 
+
 **SMART** (engl. _Simple Multi-Atribute Technique_) metodu razvio je Edwards 1971. Njena jednostavnost proizlazi iz direktonog ocjenjivanja alternativa iu korištenje prirodne mjerne ljestvice, vaganja kriterija i odvajanja alternativa kriterija. Prednost metode je upotreba linearne funkcije kao funkcije vrijednosti, jednostavnost, odluka koja je nezavisna od alternativa i robustnost na promjene alternativa. Dok su nedostatci povećanje kompleksnisti kod povećanja broja kriterija, brzo odbacivanje nisko rangiranih alternativa, problematično određivanje odgovarajućih vaganja i nekonzistentnost zbog subjektivnog pristupa provedbi metode.
+
+Težine kriterija normaliziraju se izrazom:
+
+$$
+w_i=\frac{W_i}{\sum_{j=1}^{n}W_j}
+$$
+
+pri čemu je $W_i$ početna težina kriterija, a $w_i$ normalizirana težina.
+
+izračun SMART rezultata:
+
+Ukupna vrijednost alternative računa se kao:
+
+$$
+S(a)=\sum_{i=1}^{n} w_i \cdot v_i(a)
+$$
+
+gdje je:
+
+- $w_i$ – normalizirana težina kriterija,
+- $v_i(a)$ – vrijednost alternative prema kriteriju $i$,
+- $S(a)$ – ukupni SMART rezultat alternative.
+
+Swing weighting:
+
+Početna težina posljednjeg kriterija postavlja se na:
+
+$$
+W_n = 10
+$$
+
+Za ostale kriterije težine se računaju unatrag:
+
+$$
+W_i = W_{i+1}\cdot r_i,\qquad i=n-1,\ldots,1
+$$
+
+gdje je $r_i$ omjer važnosti koji određuje korisnik.
+
+Nakon toga težine se normaliziraju:
+
+$$
+w_i=\frac{W_i}{\sum_{j=1}^{n}W_j}
+$$
 
 ### Prikupljanje i priprema podataka
 
@@ -195,9 +243,15 @@ Moguča poboljšanja:
 
 ## Literatura i izvori
 
+Kostelić K. (2025). Uvod u višekriterijsko odlučivanje
 https://rpubs.com/kakoste/uvod_MCDM
+(pristupljeno 21.7.2026.)
 
 Edwards, W., & Barron, F. H. (1994). SMARTS and SMARTER: Improved simple methods for multiattribute utility measurement. Organizational Behavior and Human Decision Processes, 60(3), 306–325.
+
+Saaty, T. L. and Ergu, D. (2015). When is a decision-making method trustworthy? Criteria for
+evaluating multi-criteria decision-making methods. International Journal of Information Technol-
+ogy and Decision Making, 14(6), 1171–1187.
 
 Scraper:
   https://rapidapi.com/pradeepbardiya13/api/g2-data-api
