@@ -67,6 +67,25 @@ w_i = \frac{W_i}{\sum_{j=1}^{n} W_j}
 $$
 
 
+
+**Izračun SMART rezultata:**
+
+Nakon određivanja normaliziranih težina za svaki alat izračunava se ukupni SMART rezultat kao ponderirani zbroj vrijednosti svih odabranih kriterija:
+
+$$
+S_k=\sum_{i=1}^{n} w_i \cdot x_{ki}
+$$
+
+gdje je:
+
+- $S_k$ ukupni SMART rezultat alternative,
+- $w_i$ normalizirana težina kriterija,
+- $x_{ki}$ vrijednost alternative prema kriteriju $i$.
+- $n$ broj odabranih kriterija
+
+
+
+
 ### Prikupljanje i priprema podataka
 
 Izvor podataka je G2 (https://www.g2.com/). G2 je web stranica sa recenzijama poslovnih software alata, te jedna od kategorija je edukacija.
@@ -128,22 +147,6 @@ Nakon određivanja normaliziranih težina, za svaki alat računa se ukupni SMART
 Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno prema ostvarenom rezultatu te se korisniku prikaže preporučeni alat (sa linkom na G2 stranicu alata i G2 recenzijom alata) zajedno sa kompletnom rang-listom.
 
 *_screenshot_
-
-
-**Izračun SMART rezultata:**
-
-Nakon određivanja normaliziranih težina za svaki alat izračunava se ukupni SMART rezultat kao ponderirani zbroj vrijednosti svih odabranih kriterija:
-
-$$
-S_k=\sum_{i=1}^{n} w_i \cdot x_{ki}
-$$
-
-gdje je:
-
-- $S_k$ ukupni SMART rezultat alternative,
-- $w_i$ normalizirana težina kriterija,
-- $x_{ki}$ vrijednost alternative prema kriteriju $i$.
-- $n$ broj odabranih kriterija
 
 
 **Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pas u sve vrijednosti već izražene na istoj mjernoj ljestvici.
