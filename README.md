@@ -192,9 +192,13 @@ Arhitektura aplikacije omogućuje jednostavno proširenje novim kategorijama i a
 
 Zbog ograničenja besplatnih verzija oba korištena API-a nije moguće dobiti podatke u stvarnom vremenu, nego samo slike podataka u određenom vremenu. Ukoliko se ažurirnjem alata promijene mišljenja korisnika ili pojave novi relevantni alati na G2 aplikacija neće predstavljati relevantnu sliku stvarnosti. Također postoje relevantne kategorije za nastavnike koje nisu uključene u aplikaciju zboig manjka recenzija za feature/kriterije.
 
+Aplikcija ne uzima se u obzir jesu li alati besplatni/kavke su recenzije besplatnih verzija, može predložiti skupi alat korisniku koji nije spreman trošiti osobni novac za najprikladniji alat.
+
 Ocjenjivanje kriterija na G2 je binarno. Korisnici za pojedinu funkcionalnost označuju jesu li njome zadovoljni ili nisu, što znači da korisnik koji bi za neku funkcionalnost dao npr. 6/10 u dekadskoj ljestvici će tu funkcionalnost ocijeniti tako da je zadovoljan. Budući da takvo ocjenjivanje označava udio zadovoljnih korisnika, ali ne njihov intenzitet zadovoljstva, takav način prikupljanja podataka može dovesti do precjenjivanja pojedinih funkcionalnosti.
 
-Ograničenja korištenja SMART metode uključuju 
+SMART metoda temelji se na linearnom ponderiranom zbroju kriterija, zbog čega pretpostavlja da se doprinos svakog kriterija ukupnom rezultatu može izraziti neovisno o ostalim kriterijima. U ovom radu nije razmatrana moguća međusobna ovisnost pojedinih funkcionalnosti alata.
+
+U implementaciji SMART metode svi odabrani kriteriji tretiraju se kao kompenzacijski. To znači da vrlo dobra ocjena prema jednom kriteriju može nadoknaditi  lošju ocjenu prema drugome, iako u stvarnoj situaciji korisnik neke funkcionalnosti može smatrati poželjnima, a ne obaveznima. Primjerice u slučaju gdje je kod alata za video razgovore ključna funkcionalnost (npr. dijeljenje zaslona) lošije ocijenjena dok su sporedne funkcionalnosti (npr. prilagođivanje UI-a, analitika) prosječno vrlo visoko ocijenjene taj alat može biti preporučen.
 
 **Moguća poboljšanja**
 
@@ -202,6 +206,7 @@ Moguča poboljšanja:
 
 - dinamičko prikupljanje podataka
 - proširenje kategorija
+- označavanje jesu li alati besplatni, imaju li besplatnu verziju i koja su ograničenja te verzije
 - aplikacija koja služi za prijedlog bilo koje kategorije
 - usporedba SMART metode s drugim metodama višekriterijskog odlučivanja
 
