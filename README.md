@@ -237,5 +237,4 @@ G2API:
   ## Upute korištenja
 
 
-
-  bla
+možda maknut
