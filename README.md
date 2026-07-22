@@ -190,7 +190,11 @@ Arhitektura aplikacije omogućuje jednostavno proširenje novim kategorijama i a
 
 **Ograničenja**
 
-Zbog ograničenja besplatnih verzija oba korištena API-a nije moguće dobiti podatke u stvarnom vremenu, nego samo slike podataka u određenom vremenu. Ukoliko se ažurirnjem alata promijene mišljenja korisnika ili pojave novi relevantni alati na G2 aplikacija neće predstavljati relevantnu sliku stvarnosti.
+Zbog ograničenja besplatnih verzija oba korištena API-a nije moguće dobiti podatke u stvarnom vremenu, nego samo slike podataka u određenom vremenu. Ukoliko se ažurirnjem alata promijene mišljenja korisnika ili pojave novi relevantni alati na G2 aplikacija neće predstavljati relevantnu sliku stvarnosti. Također postoje relevantne kategorije za nastavnike koje nisu uključene u aplikaciju zboig manjka recenzija za feature/kriterije.
+
+Ocjenjivanje kriterija na G2 je binarno. Korisnici za pojedinu funkcionalnost označuju jesu li njome zadovoljni ili nisu, što znači da korisnik koji bi za neku funkcionalnost dao npr. 6/10 u dekadskoj ljestvici će tu funkcionalnost ocijeniti tako da je zadovoljan. Budući da takvo ocjenjivanje označava udio zadovoljnih korisnika, ali ne njihov intenzitet zadovoljstva, takav način prikupljanja podataka može dovesti do precjenjivanja pojedinih funkcionalnosti.
+
+Ograničenja korištenja SMART metode uključuju 
 
 **Moguća poboljšanja**
 
