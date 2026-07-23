@@ -51,7 +51,9 @@ do.call(navbarPage, c(
           
           uiOutput(paste0("ranking_ui_", tab_id)),
 
-          uiOutput(paste0("weight_ui_", tab_id))
+          uiOutput(paste0("weight_ui_", tab_id)),
+          
+          uiOutput(paste0("rezultat_", tab_id))
         )
       )
     )

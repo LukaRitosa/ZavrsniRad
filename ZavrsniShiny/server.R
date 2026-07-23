@@ -4,12 +4,12 @@ source("data.R")
 
 function(input, output, session) {
   
+  step <- lapply(names(kriteriji), function(x) reactiveVal("select"))
+  names(step) <- names(kriteriji)
+  
   lapply(names(kriteriji), function(tab_id){
     btn_output_id <- paste0("btn_", gsub("tab_", "", tab_id), "_ui")
     btn_input_id <- paste0("btn_", gsub("tab_", "", tab_id))
-    
-    show_ranking <- reactiveVal(FALSE)
-    show_weight <- reactiveVal(FALSE)
     
     output[[btn_output_id]] <- renderUI({
       kat <- kriteriji[[tab_id]]
@@ -26,10 +26,10 @@ function(input, output, session) {
         class = "btn btn-outline-primary text-start w-100 p-3"
       )
     })
-    
+     
     output[[paste0("odabir_ui_", tab_id)]] <- renderUI({
       
-      if(!show_ranking()) {
+      if(step[[tab_id]]() == "select") {
         
         tagList(
           
@@ -52,7 +52,7 @@ function(input, output, session) {
     })
     
     output[[paste0("ranking_ui_", tab_id)]] <- renderUI({
-      if(show_ranking() && !show_weight()) {
+      if(step[[tab_id]]() == "ranking") {
         tagList(
           tags$p("Povuci i poredaj kriterije (1 = najvažnije):"),
           rank_list(
@@ -72,14 +72,13 @@ function(input, output, session) {
             "Vrati se na odabir",
             class = "btn btn-warning btn-sm"
           ),
-          tags$br(), tags$br(),
-          uiOutput(paste0("rezultat_", tab_id))
+          tags$br(), tags$br()
         )
       }
     })
     
     output[[paste0("weight_ui_", tab_id)]] <- renderUI({
-      if(show_weight()){
+      if(step[[tab_id]]() == "weight"){
         poredak <- input[[paste0("rang_", tab_id)]]
         n <- length(poredak)
         
@@ -112,9 +111,14 @@ function(input, output, session) {
             "Natrag na rangiranje",
             class = "btn btn-warning btn-sm ms-2"
           ),
-          tags$br(), tags$br(),
-          uiOutput(paste0("rezultat_", tab_id))
+          tags$br(), tags$br()
         )
+      }
+    })
+    
+    output[[paste0("rezultat_", tab_id)]] <- renderUI({
+      if(step[[tab_id]]() == "result"){
+        uiOutput(paste0("rezultat_sadrzaj_", tab_id))
       }
     })
     
@@ -123,25 +127,25 @@ function(input, output, session) {
       req(input[[paste0("odabir_", tab_id)]])
       req(length(input[[paste0("odabir_", tab_id)]]) > 0)
       
-      show_ranking(TRUE)
-      show_weight(FALSE)
+      step[[tab_id]]("ranking")
     })
     
     observeEvent(input[[paste0("btn_natrag_", tab_id)]], {
       
-      show_ranking(FALSE)
-      show_weight(FALSE)
+      step[[tab_id]]("select")
     })
     
     observeEvent(input[[paste0("btn_natrag_weight_", tab_id)]], {
-      show_ranking(TRUE)
-      show_weight(FALSE)
+      step[[tab_id]]("ranking")
     })
     
     
     observeEvent(input[[paste0("btn_na_weight_", tab_id)]], {
-      show_ranking(TRUE)
-      show_weight(TRUE)
+      step[[tab_id]]("weight")
+    })
+    
+    observeEvent(input[[paste0("btn_natrag_rezultat_", tab_id)]],{
+      step[[tab_id]]("weight")
     })
   })
   
@@ -190,7 +194,7 @@ function(input, output, session) {
     df
   }
   
-  rez_ui <- function(df){
+  rez_ui <- function(df, tab_id){
     g2_link <- paste0("https://www.g2.com/products/", df$slug[1], "/reviews")
     
     tagList(
@@ -220,6 +224,14 @@ function(input, output, session) {
             )
           })
         )
+      ),
+      
+      tags$br(),
+      
+      actionButton(
+        paste0("btn_natrag_rezultat_", tab_id),
+        "Natrag na težine",
+        class = "btn btn-warning"
       )
     )
   }
@@ -240,7 +252,10 @@ function(input, output, session) {
       }
         
       df <- smart_izracun(poredak, kriteriji[[tab_id]], weight_omjeri)
-      output[[paste0("rezultat_", tab_id)]] <- renderUI(rez_ui(df))
+      
+      output[[paste0("rezultat_sadrzaj_", tab_id)]] <- renderUI(rez_ui(df, tab_id))
+  
+      step[[tab_id]]("result")
     })
   })
   

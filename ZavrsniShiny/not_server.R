@@ -6,10 +6,10 @@ function(input, output, session) {
   
   lapply(names(kriteriji), function(tab_id){
     btn_output_id <- paste0("btn_", gsub("tab_", "", tab_id), "_ui")
-    print(paste("Server renderira:", btn_output_id))
     btn_input_id <- paste0("btn_", gsub("tab_", "", tab_id))
     
     show_ranking <- reactiveVal(FALSE)
+    show_weight <- reactiveVal(FALSE)
     
     output[[btn_output_id]] <- renderUI({
       kat <- kriteriji[[tab_id]]
@@ -52,7 +52,7 @@ function(input, output, session) {
     })
     
     output[[paste0("ranking_ui_", tab_id)]] <- renderUI({
-      if(show_ranking()) {
+      if(show_ranking() && !show_weight()) {
         tagList(
           tags$p("Povuci i poredaj kriterije (1 = najvažnije):"),
           rank_list(
@@ -62,8 +62,8 @@ function(input, output, session) {
           ),
           tags$br(),
           actionButton(
-            paste0("btn_izracun_", tab_id),
-            "Izračunaj",
+            paste0("btn_na_weight_", tab_id),
+            "Dalje",
             class = "btn btn-primary"
           ),
           tags$br(),
@@ -78,20 +78,71 @@ function(input, output, session) {
       }
     })
     
+    output[[paste0("weight_ui_", tab_id)]] <- renderUI({
+      if(show_weight()){
+        poredak <- input[[paste0("rang_", tab_id)]]
+        n <- length(poredak)
+        
+        pitanja <- lapply(1:(n-1), function(i){
+          tagList(
+            tags$p(
+              tags$strong(
+                paste0("Koliko puta vam je '", poredak[i], "' važniji od '", poredak[i+1],"'?")
+              )
+            ),
+            selectInput(
+              inputId = paste0("weight_", tab_id, "_", i),
+              label = NULL,
+              choices = 2 : 10,
+              selected = 2,
+              width = "100px"
+            ),
+            tags$hr()
+          )
+        })
+        tagList(
+          pitanja,
+          actionButton(
+            paste0("btn_izracun_", tab_id),
+            "Izračunaj",
+            class = "btn btn-primary"
+          ),
+          actionButton(
+            paste0("btn_natrag_weight_", tab_id),
+            "Natrag na rangiranje",
+            class = "btn btn-warning btn-sm ms-2"
+          ),
+          tags$br(), tags$br(),
+          uiOutput(paste0("rezultat_", tab_id))
+        )
+      }
+    })
+    
     observeEvent(input[[paste0("btn_potvrdi_", tab_id)]], {
       
       req(input[[paste0("odabir_", tab_id)]])
       req(length(input[[paste0("odabir_", tab_id)]]) > 0)
       
       show_ranking(TRUE)
+      show_weight(FALSE)
     })
     
     observeEvent(input[[paste0("btn_natrag_", tab_id)]], {
       
       show_ranking(FALSE)
+      show_weight(FALSE)
+    })
+    
+    observeEvent(input[[paste0("btn_natrag_weight_", tab_id)]], {
+      show_ranking(TRUE)
+      show_weight(FALSE)
     })
     
     
+    observeEvent(input[[paste0("btn_na_weight_", tab_id)]], {
+      show_ranking(TRUE)
+      show_weight(TRUE)
+    })
   })
   
   
@@ -106,16 +157,27 @@ function(input, output, session) {
     
   })
   
-  smart_izracun <- function(poredak, kat) {
+  smart_izracun <- function(poredak, kat, weight_omjeri) {
     df <- kat$alati
     n  <- length(poredak)
     
-    tezine_raw  <- (n - seq_along(poredak) + 1)
-    tezine_norm <- tezine_raw / sum(tezine_raw)
+    tezine <- numeric(n)
+    tezine[n] <- 10
+    
+    if(n>1){
+      for(i in (n-1) : 1){
+        tezine[i] <- tezine[i + 1] * weight_omjeri[i]
+      }
+    }
+    
+    tezine_norm <- tezine / sum(tezine)
     names(tezine_norm) <- poredak
     
-
-    krit_to_col <- setNames(names(df)[-1], kat$kriteriji)
+    feature_cols <- setdiff(
+      names(df), c("naziv", "slug", "category","rating")
+    )
+    
+    krit_to_col <- setNames(feature_cols, kat$kriteriji)
     cols_odabrani <- krit_to_col[poredak]
     
     df$score <- round(
@@ -129,12 +191,19 @@ function(input, output, session) {
   }
   
   rez_ui <- function(df){
+    g2_link <- paste0("https://www.g2.com/products/", df$slug[1], "/reviews")
+    
     tagList(
       tags$div(
         class= "alert alert-success",
         tags$h5("Preporučeni alat:"),
         tags$h4(df$naziv[1]),
-        tags$p(paste0("SMART skor: ", df$score[1]))
+        tags$p(paste0("SMART skor: ", df$score[1])),
+        
+        tags$p(strong("Ocjena na G2: "), df$rating[1], " / 5"),
+        
+        tags$a("G2 recenzije", href = g2_link, target = "_blank", class = "btn btn-primary"
+        )
       ),
       tags$h6("Rang lista:"),
       tags$table(
@@ -157,7 +226,20 @@ function(input, output, session) {
   
   lapply(names(kriteriji), function(tab_id){
     observeEvent(input[[paste0("btn_izracun_", tab_id)]],{
-      df <- smart_izracun(input[[paste0("rang_", tab_id)]], kriteriji[[tab_id]])
+      
+      poredak <- input[[paste0("rang_", tab_id)]]
+      n <- length(poredak)
+      
+      weight_omjeri <- if(n > 1){
+        sapply(1:(n-1), function(i){
+          val <- as.numeric(input[[paste0("weight_", tab_id, "_", i)]])
+          if(is.null(val) || val < 1) 1 else val
+        })
+      } else{
+        numeric(0)
+      }
+      
+      df <- smart_izracun(poredak, kriteriji[[tab_id]], weight_omjeri)
       output[[paste0("rezultat_", tab_id)]] <- renderUI(rez_ui(df))
     })
   })
