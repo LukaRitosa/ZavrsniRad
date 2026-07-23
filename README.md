@@ -1,6 +1,6 @@
 # Shiny aplikacija za pomoć pri odabiru digitalnih alata za edukaciju koristeći SMART metodu 
 
-# Shiny App for Assisting With Choosing Digital Tools for Education Utilizing the SMART Method
+# Shiny App for Assisting with Choosing Digital Tools for Education Utilizing the SMART Method
 
 Luka Ritoša
 
@@ -12,13 +12,13 @@ Luka Ritoša
 
 **Kolegij:** Operacijska istraživanja
 
-**Mertor:** doc. dr. sc. Katarina Kostelić
+**Mentor:** doc. dr. sc. Katarina Kostelić
 
 <img width="2664" height="700" alt="slika" src="https://github.com/user-attachments/assets/dd51b9a2-8d6e-45fa-84a2-2e175dde0986" />
 
 ## Uvod
 
-U periodu digitaliziranja edukacije nastavnici su preplavljeni raznim alatima za nastavu. Cilj ovog rada je razvoj sustava za potporu odlučivanju pri odabiru nastavnih alata. 
+U periodu digitaliziranja edukacije nastavnici su preplavljeni raznim alatima za nastavu. Cilj ovog rada je razvoj aplikacije za potporu odlučivanju pri odabiru nastavnih alata. 
 
 EduToolSelector (ili koji bod naziv bude bio na krau) je shiny aplikacija koristi SMART metodu za prijedlog alata određene kategorije, tako da korisnik bira bitne kriterije, rangira ih i dodijeljuje koliko je puta npr. kriterij x2 važniji od kriterija x1. 
 
@@ -28,9 +28,63 @@ Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2
 
 ### Teorijska podloga
 
-**Višekriterijsko odlučivanje** je grana operacijskih istraživanja koja se bavi metodama za odabir između više alternativa prema više kriterija istovremeno. Za razliku od jednokriterijskih problema optimizacije, u svarnim situacijama odluke se rijetko donose prema donose prema samo jednom cilju - nastavnik koji bira digitalni alat za nastavu uzima u obzir više faktora.
+Kod problema odabira digitlnih nastavnih alata nastavnici pri odabiru ne razmatraju samo jednu karakteristiku alata, već istodobno uzimaju u obzir više međusobno različitih kriterija. Budući da neki alati mogu biti bolji prema jednom, a lošiji prema drugom kriteriju, nije moguće odrediti najbolju alternativu promatrajuči samo jednu značajku, što ovaj problem čini problemom višekriterijskog odlučivanja.
 
-**SMART** (engl. _Simple Multi-Atribute Technique_) metodu razvio je Edwards 1971. Njena jednostavnost proizlazi iz direktonog ocjenjivanja alternativa iu korištenje prirodne mjerne ljestvice, vaganja kriterija i odvajanja alternativa kriterija. Prednost metode je upotreba linearne funkcije kao funkcije vrijednosti, jednostavnost, odluka koja je nezavisna od alternativa i robustnost na promjene alternativa. Dok su nedostatci povećanje kompleksnisti kod povećanja broja kriterija, brzo odbacivanje nisko rangiranih alternativa, problematično određivanje odgovarajućih vaganja i nekonzistentnost zbog subjektivnog pristupa provedbi metode.
+**Višekriterijsko odlučivanje** je grana operacijskih istraživanja koja se bavi metodama za odabir između više alternativa prema više kriterija istovremeno. Za razliku od jednokriterijskih problema optimizacije, u svarnim situacijama odluke se rijetko donose prema donose prema samo jednom cilju. Cilj metoda višekriterijskog odlučivanja nije pronaći univerzalno najbolju alternativu, već onu koja najbolje odgovara preferencama donositelja odluke.
+
+Prilikom odabira metode višekriterijskog odlučivanja potrebno je uzeti u obzir karakteristike problema te odabrati metodu koja je dovoljno jednostavna za primjenu, ali istovremeno omogućuje pouzdano donošenje odluka. Prema Saaty i Ergu (2015) metoda je loše odabrana ukoliko je njena logika komplicirana i mogu ju razumijeti samo eksperti u donošenju odluka, odnosno dobro odabrana metoda je razumljiva i može se implementirati sa strane većine korisnika u praksi. Iz tog razloga je odabrana SMART metoda, koja predstavlja jednostavan, ali učinkovit pristup riješenja ovakvih problema. 
+
+**SMART** (engl. _Simple Multi-Atribute Technique_) metodu razvio je Edwards 1971, dok su Edwards i Barron (1994) kasnije predstavili unaprijeđenje inačice SMARTS i SMARTER. Metoda se temelji na određivanju težina kriterija te izračunu ukupne vrijednosti svake alternative kao ponderiranog zbroja njezinih vrijednosti prema odabranim kriterijima. Zbog jednostavne implementacije, transparentnosti odabira alternativa i lako razuljivih rezultata SMART metoda često se koristi u problemima odabira alternativa i sustavima za potporu olučivanju (Olson, 1996; Patel i sur., 2017). 
+
+Prednost metode je upotreba linearne funkcije kao funkcije vrijednosti, jednostavnost, odluka koja je nezavisna od alternativa i robustnost na promjene alternativa. Dok su nedostatci povećanje kompleksnisti kod povećanja broja kriterija, brzo odbacivanje nisko rangiranih alternativa, problematično određivanje odgovarajućih vaganja i nekonzistentnost zbog subjektivnog pristupa provedbi metode.
+
+
+#### Matematičke formule korištene u radu
+
+**Izračun težina kriterija**
+
+Početna težina posljednjeg kriterija postavlja se na vrijednost 10:
+
+$$
+W_n = 10
+$$
+
+Težine ostalih kriterija računaju se unatrag korištenjem omjera važnpsti koje odredi korisnik:
+
+$$
+W_i = W_{i+1} · r_i
+$$
+
+gdje je:
+
+- $W_i$ početna težina kriterija,
+- $r_i$ omjer važnosti između susjednih kriterija koji određuje korisnik.
+
+Dobivene težine zatim se normaliziraju kako bi njihov zbroj bio jednak 1:
+
+$$
+w_i = \frac{W_i}{\sum_{j=1}^{n} W_j}
+$$
+
+
+
+**Izračun SMART rezultata:**
+
+Nakon određivanja normaliziranih težina za svaki alat izračunava se ukupni SMART rezultat kao ponderirani zbroj vrijednosti svih odabranih kriterija:
+
+$$
+S_k=\sum_{i=1}^{n} w_i \cdot x_{ki}
+$$
+
+gdje je:
+
+- $S_k$ ukupni SMART rezultat alternative,
+- $w_i$ normalizirana težina kriterija,
+- $x_{ki}$ vrijednost alternative prema kriteriju $i$.
+- $n$ broj odabranih kriterija
+
+
+
 
 ### Prikupljanje i priprema podataka
 
@@ -42,67 +96,16 @@ U koraku 1 su se prikupljale pod-kategorije edukacije, nakon prikupljanja su ru�
 
 Korak 4 razdvaja podatke po kategorijama i miče funkcije u kriterijima gdje niti jedan alat nema podatak (recenziju) o funkcionalnosti. Korak 5 služi za analizu pokrivenosti funkcionalnosti, alata ili kategorija. Na temelju dobivenih rezultata donesene su odluke o uklanajnju kategorija ili alata kod kojih nije bilo dovoljno zajedničkih kriterija za smisleno višekriterijsko uspoređivanje. Classroom Management alati su imali 100% međusobnu pokrivenost funkcionalnosti, Assets je bila kategorija sa najviše funkcionalnosti no one su se preklapale u samo par navrata, kod Classroom Messageing je 2/3 alata imalo zajedničke funkcionalnosti, Study Tools je kategorija kod koje je samo jedan alat imao recenzije funkcionalnosti, dok su kod Virtual Classroom oba dvije aplikacije imale zajedničke funkcionalnosti. Nakon alanize se u 6. koraku izbacilo kategoriju Study Tools i obrisallo null vrijednosti Assessment kategorije. 
 
-Korak 7 je bio korak prevođenja naziva kategorija i funkcionalnosti na hrvatski jezik. Bitan aspekt prevođenja je bio korištenje jezika poznat široj nastavničkoj skupini, što je zahtijevalo dodatnu analizu funkcionalnosti, ta dodatna analiza je dovela do odluke o uklanjanju Classroom Messaging kategorije zbog previše specifičnčnih funkcionalnosti kategorije, uz to u većini škola/fakulteta je kanal komunikacije porukama standardiziran na razini ustanove.
+Korak 7 je bio korak prevođenja naziva kategorija i funkcionalnosti na hrvatski jezik. Cilj nije bio doslovno prevesti nazive s platforme G2, već ih prilagoditi terminologiji razuljivoj široj skupini nastavnika. Zbog toga je provedena dodatna analiza funkcionalnosti kako bi odabrani nazivi što vijernije opisivali njihovu svrhu u kontekstu nastave. Tijekom tog procesa donesena je odluka o uklanjanju _Classroom Messaging_ kategorije, zbog previše specifičnčnih funkcionalnosti kategorije koje nisu bile relevantne za širu skupinu nastavnika. Osim toga, u većini škola/fakulteta je kanal komunikacije porukama standardiziran na razini ustanove.
 
-Prijevodi:
-  "Assessment": "Procjena znanja"
-  
-        "Administration | Mobile compatibility": "Prilagođeno mobilnim uređajima",
-        
-        "Administration | White-labeling": "Prilagodba izgleda",
-        
-        "Assessment delivery | Pre-made content": "Gotovi sadržaji",
-        
-        "Assessment delivery | Question variety": "Raznolikost vrsta pitanja",
-        
-        "Assessment delivery | Real-time assessment": "Procjena u stvarnom vremenu",
-        
-        "Grading and reporting | Analytics dashboard": "Analitika",
-        
-        "Grading and reporting | Gamification": "Elementi igre"
+**Napomena:** prijevodi korišteni u radu su subjektivno izrađeni za potrebe ovog projekta te ne predstavljaju službene prijevode platforme G2.
 
-
-  "Classroom Management": "Upravljanje učionicom",
-  
-        "Platform Features | Instant Messaging": "Razmjena poruka u stvarnom vremenu",
-        
-        "Platform Features | Interactive Quizzes": "Interaktivni kvizovi",
-        
-        "Platform Features | Remote Computer Monitoring": "Praćenja rada",
-        
-        "Platform Features | Student Assignment Distribution": "Dodjela zadataka",
-        
-        "Platform Features | Teacher/Student Screensharing": "Djeljenje zaslona"
-
-            
-  "Virtual Classroom": "Virtualna učionica"
-  
-        "Collaboration | Hand Raising": "Dizanje ruke",
-        
-        "Collaboration | Participation Controls": "Upravljanje sudjelovanjem",
-        
-        "Collaboration | Screen Sharing": "Dijeljenje zaslona",
-        
-        "Collaboration | Survey Tools": "Alati za ankete",
-        
-        "Collaboration | Whiteboard": "Digitalna ploča",
-        
-        "Content Sharing | File Sharing": "Dijeljenje datoteka",
-        
-        "Content Sharing | Session Recording": "Snimanje sastanka/nastave",
-        
-        "Content Sharing | Video Streaming": "Prijenos videa uživo",
-        
-        "Functionality | Live Chat": "Slanje poruka",
-        
-        "Functionality | Markup Tools": "Alati za označavanje",
-        
-        "Functionality | Technical Support": "Tehnička podrška"
+Deteljniji postupak prevođenja i prijevodi: https://github.com/LukaRitosa/ZavrsniRad/blob/main/7_prevodenje.py.
   
 
 Zadnji korak je bio prenošenje prevedenih podataka u Shiny okruženje.
 
-**Napomena:** zbog ograničenja besplatnih verzija API servisa podaci se ne dohvaćaju dinamički pri svakom pokretanju aplikacije. Nakon završetka procesa prikupljanja i obrade podaci su spremljeni u CSV datoteke koje se učitavaju lokalno.
+**Napomena:** zbog ograničenja besplatnih verzija API servisa podaci se ne dohvaćaju dinamički pri svakom pokretanju aplikacije. Nakon završetka procesa prikupljanja i obrade podaci su spremljeni u CSV datoteke koje se učitavaju lokalno. Stoga splikacija predstavlja **_proof-of-concept_** kojim se demostrira mogućnost primjene SMART metode u odabiru digitalnih alata za edukaciju, dok bi produkcijska verzija trebala uključiti automatsko dohvaćanje i redovito ažuriranje podataka.
 
 ### Implementacija SMART modela
 
@@ -145,6 +148,9 @@ Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno 
 
 *_screenshot_
 
+
+**Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pas u sve vrijednosti već izražene na istoj mjernoj ljestvici.
+
 ### Shiny aplikacija
 
 **Arhitektura**
@@ -176,13 +182,23 @@ Korisnik prolazi kroz četiri uzastopn koraka:
 
 ## Zaključak 
 
-Cilj ovog rada bio je razviti sustav za potporu u odlučivanju koji nastavnicima olkšava odabir digitalnih alata za nastavu primjenom SMART metode višekriterijskog odlučivanja. Razvijena je Shiny aplikacija koja korisniku omogućuje odabir alata, definiranje kriterija, njihovo rangiranje i određivanje relativne važnosti, nakon čega se izračuna rang-lista dostupnih alata te prikazuje najprikladnija alternativa.
+Cilj ovog rada bio je razviti aplikaciju za potporu u odlučivanju koji nastavnicima olkšava odabir digitalnih alata za nastavu primjenom SMART metode višekriterijskog odlučivanja. Razvijena je Shiny aplikacija koja korisniku omogućuje uži odabir alata, biranje (subjektivno?) relevantnih kriterija, njihovo rangiranje i određivanje relativne važnosti, nakon čega se izračunava rang-lista dostupnih alata te prikazuje najprikladnija alternativa.
 
-Intuitivna je i jenostavna je za korištenje. Kategorije i kriteriji su prevedeni na jezik poznat široj skupini nastavnika. Aplikaicja je flekibilna na proširenje podataka.
+Prilikom prevođenja kategorija i kriterija nastojalo se koristiti terminologiju koja je uobičajena i razuljiva ciljanoj skupini korisnika - nastavnicima u Republici Hrvatskoj.
+
+Arhitektura aplikacije omogućuje jednostavno proširenje novim kategorijama i alatima dodavanjem odgovarajućih CSV datoteka, bez potrebe za značajnim izmjenama korisničkog sučelja ili implementacije SMART modela.
 
 **Ograničenja**
 
-Zbog ograničenja besplatnih verzija oba korištena API-a nije moguće dobiti podatke u stvarnom vremenu, nego samo slike podataka u određenom vremenu. Ukoliko se ažurirnjem alata promijene mišljenja korisnika ili pojave novi relevantni alati na G2 aplikacija neće predstavljati relevantnu sliku stvarnosti.
+Zbog ograničenja besplatnih verzija oba korištena API-a nije moguće dobiti podatke u stvarnom vremenu, nego samo slike podataka u određenom vremenu. Ukoliko se ažurirnjem alata promijene mišljenja korisnika ili pojave novi relevantni alati na G2 aplikacija neće predstavljati relevantnu sliku stvarnosti. Također postoje relevantne kategorije za nastavnike koje nisu uključene u aplikaciju zboig manjka recenzija za feature/kriterije.
+
+Aplikcija ne uzima se u obzir jesu li alati besplatni/kavke su recenzije besplatnih verzija, može predložiti skupi alat korisniku koji nije spreman trošiti osobni novac za najprikladniji alat.
+
+Ocjenjivanje kriterija na G2 je binarno. Korisnici za pojedinu funkcionalnost označuju jesu li njome zadovoljni ili nisu, što znači da korisnik koji bi za neku funkcionalnost dao npr. 6/10 u dekadskoj ljestvici će tu funkcionalnost ocijeniti tako da je zadovoljan. Budući da takvo ocjenjivanje označava udio zadovoljnih korisnika, ali ne njihov intenzitet zadovoljstva, takav način prikupljanja podataka može dovesti do precjenjivanja pojedinih funkcionalnosti.
+
+SMART metoda temelji se na linearnom ponderiranom zbroju kriterija, zbog čega pretpostavlja da se doprinos svakog kriterija ukupnom rezultatu može izraziti neovisno o ostalim kriterijima. U ovom radu nije razmatrana moguća međusobna ovisnost pojedinih funkcionalnosti alata.
+
+U implementaciji SMART metode svi odabrani kriteriji tretiraju se kao kompenzacijski. To znači da vrlo dobra ocjena prema jednom kriteriju može nadoknaditi  lošju ocjenu prema drugome, iako u stvarnoj situaciji korisnik neke funkcionalnosti može smatrati poželjnima, a ne obaveznima. Primjerice u slučaju gdje je kod alata za video razgovore ključna funkcionalnost (npr. dijeljenje zaslona) lošije ocijenjena dok su sporedne funkcionalnosti (npr. prilagođivanje UI-a, analitika) prosječno vrlo visoko ocijenjene taj alat može biti preporučen.
 
 **Moguća poboljšanja**
 
@@ -190,14 +206,25 @@ Moguča poboljšanja:
 
 - dinamičko prikupljanje podataka
 - proširenje kategorija
+- označavanje jesu li alati besplatni, imaju li besplatnu verziju i koja su ograničenja te verzije
 - aplikacija koja služi za prijedlog bilo koje kategorije
 - usporedba SMART metode s drugim metodama višekriterijskog odlučivanja
 
 ## Literatura i izvori
 
+Kostelić K. (2025). Uvod u višekriterijsko odlučivanje
 https://rpubs.com/kakoste/uvod_MCDM
+(pristupljeno 21.7.2026.)
 
 Edwards, W., & Barron, F. H. (1994). SMARTS and SMARTER: Improved simple methods for multiattribute utility measurement. Organizational Behavior and Human Decision Processes, 60(3), 306–325.
+
+Olson, D. L. (1996). Decision aids for selection problems. Journal of the Operational Research Society, 48(5), 541-542. 
+
+Patel, M. R., Vashi, M. P., & Bhatt, B. V. (2017). SMART–Multi-criteria decision-making technique for use in planning activities. New Horizons in Civil Engineering (NHCE 2017), 1–6.
+
+Saaty, T. L. and Ergu, D. (2015). When is a decision-making method trustworthy? Criteria for
+evaluating multi-criteria decision-making methods. International Journal of Information Technol-
+ogy and Decision Making, 14(6), 1171–1187.
 
 Scraper:
   https://rapidapi.com/pradeepbardiya13/api/g2-data-api
@@ -208,3 +235,6 @@ G2API:
 
 
   ## Upute korištenja
+
+
+možda maknut
