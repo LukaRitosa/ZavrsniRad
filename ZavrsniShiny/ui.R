@@ -2,10 +2,16 @@ library(shiny)
 library(sortable)
 source("data.R")
 
+library(bslib)
+
 do.call(navbarPage, c(
   list(
     id = "navbar",
-    title= "eduTool SMART selektor"
+    title= "eduTool SMART selektor",
+    theme = bs_theme(
+      version = 5,
+      bootswatch = "flatly"
+    )
   ),
   
   list(tabPanel(
@@ -19,12 +25,13 @@ do.call(navbarPage, c(
         tags$h2("Biranje nastavnih alata"),
         tags$p("Ova aplikacija pomaže nastvnicima odabrati optimalni 
           digitalni alat za nastavu koristeći SMART metodu 
-          operacijskog istraživanja. Odaberi kategoriju alata i
-          postavi težine kriterija prema vlastitim potrebama"),
+          operacijskih istraživanja. Odeberite kategoriju alata
+          koja Vam je potrebna, izaberite releventne funkcionalnosti, 
+          rangirajte funkcionalnosti te dodijelite intenzitet razlika između funkcionalnosti"),
         
         tags$br(),
         
-        tags$h4("Odaberi kategoriju: "),
+        tags$h4("Odaberite kategoriju: "),
         tags$br(),
         
         fluidRow(
@@ -46,6 +53,8 @@ do.call(navbarPage, c(
         column(8, offset = 2,
           tags$br(),
           tags$h3(kat$naziv),
+          
+          uiOutput(paste0("step_ui_", tab_id)),
           
           uiOutput(paste0("odabir_ui_", tab_id)),
           

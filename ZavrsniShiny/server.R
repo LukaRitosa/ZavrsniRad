@@ -11,6 +11,10 @@ function(input, output, session) {
     btn_output_id <- paste0("btn_", gsub("tab_", "", tab_id), "_ui")
     btn_input_id <- paste0("btn_", gsub("tab_", "", tab_id))
     
+    output[[paste0("step_ui_", tab_id)]] <- renderUI({
+      step_ui(step[[tab_id]]())
+    })
+    
     output[[btn_output_id]] <- renderUI({
       kat <- kriteriji[[tab_id]]
       actionButton(
@@ -33,7 +37,7 @@ function(input, output, session) {
         
         tagList(
           
-          tags$p("Odaberi kriterije za analizu:"),
+          tags$p("Odaberite kriterije relevante za Vaše potrebe:"),
           
           checkboxGroupInput(
             inputId = paste0("odabir_", tab_id),
@@ -45,7 +49,7 @@ function(input, output, session) {
           actionButton(
             paste0("btn_potvrdi_", tab_id),
             "Potvrdi kriterije",
-            class = "btn btn-secondary"
+            class = "btn btn-primary"
           )
         )
       }
@@ -54,7 +58,7 @@ function(input, output, session) {
     output[[paste0("ranking_ui_", tab_id)]] <- renderUI({
       if(step[[tab_id]]() == "ranking") {
         tagList(
-          tags$p("Povuci i poredaj kriterije (1 = najvažnije):"),
+          tags$p("Povucite i poredajte kriterije (najviši = najvažniji):"),
           rank_list(
             text     = "",
             labels   = input[[paste0("odabir_", tab_id)]],
@@ -86,7 +90,7 @@ function(input, output, session) {
           tagList(
             tags$p(
               tags$strong(
-                paste0("Koliko puta vam je '", poredak[i], "' važniji od '", poredak[i+1],"'?")
+                paste0("Koliko puta Vam je '", poredak[i], "' važniji od '", poredak[i+1],"'?")
               )
             ),
             selectInput(
@@ -192,6 +196,50 @@ function(input, output, session) {
     df <- df[order(-df$score), ]
     df$rang <- 1:nrow(df)
     df
+  }
+  
+  step_ui <- function(step){
+    
+    koraci <- c("select", "ranking", "weight", "result")
+    nazivi <- c("Odabir", "Rangiranje", "Težine", "Rezultat")
+    
+    trenutni <- match(step, koraci)
+    
+    div(
+      style="
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:12px;
+        margin-bottom:30px;
+        font-weight:600;
+      ",
+      
+      lapply(seq_along(nazivi), function(i){
+        
+        boja <- if(i <= trenutni) "#0d6efd" else "#adb5bd"
+        velicina <- if(i == trenutni) "1.2em" else "1em"
+        
+        tagList(
+          span(
+            style=paste0(
+              "color:", boja,
+              ";font-size:", velicina, ";"
+            ),
+            nazivi[i]
+          ),
+          
+          if(i != length(nazivi))
+            span(
+              style=paste0(
+                "color:",
+                if(i < trenutni) "#0d6efd" else "#adb5bd"
+              ),
+              "➜"
+            )
+        )
+      })
+    )
   }
   
   rez_ui <- function(df, tab_id){
