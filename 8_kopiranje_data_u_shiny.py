@@ -13,7 +13,8 @@ DESTINATION.mkdir(parents=True, exist_ok=True)
 files = [
     "features_assessment2.csv",
     "features_classroom_management2.csv",
-    "features_virtual_classroom2.csv"
+    # "features_virtual_classroom2.csv"
+    "features_virtual_classroom3.csv"
 ]
 
 for file in files:

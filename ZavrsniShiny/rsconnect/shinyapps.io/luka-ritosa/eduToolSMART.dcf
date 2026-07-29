@@ -5,7 +5,7 @@ account: luka-ritosa
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 17643734
-bundleId: 12325479
+bundleId: 12336676
 url: https://luka-ritosa.shinyapps.io/eduToolSMART/
 version: 1
 asMultiple: FALSE
