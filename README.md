@@ -18,7 +18,7 @@ Luka Ritoša
 
 ## Uvod
 
-**Dobra odluka** i dobar ishod imaju različito značenje. Dobra odluka može dovesti do lošeg ishoda, dok i loša odluka može dovesti do dobrog ishoda. No generalno je prihvaćeno da su dobre odluke često najbolji (i možda jedini) način za postizanje dobrih ishoda (T. Havranek, D. MacNair, 2023).
+**Dobra odluka** i dobar ishod imaju različito značenje. Dobra odluka može dovesti do lošeg ishoda, dok i loša odluka može dovesti do dobrog ishoda. No generalno je prihvaćeno da su dobre odluke često najbolji (i možda jedini) način za postizanje dobrih ishoda (Havranek i MacNair, 2023).
 
 U periodu digitaliziranja edukacije nastavnici su preplavljeni raznim alatima za nastavu. Cilj ovog rada je razvoj aplikacije za potporu odlučivanju pri odabiru nastavnih alata. 
 
@@ -29,6 +29,8 @@ Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2
 ## Razrada 
 
 ### Teorijska podloga
+
+Pristup **operacijskih istraživanja** pomaže u usporedbi alternativa, odnosno pomaže u prosudbi donositelju odluka, nije zamjena za prosudbu (Sharma, 2016).
 
 Kod problema odabira digitalnih nastavnih alata nastavnici pri odabiru ne razmatraju samo jednu karakteristiku alata, već istodobno uzimaju u obzir više međusobno različitih kriterija. Budući da neki alati mogu biti bolji prema jednom, a lošiji prema drugom kriteriju, nije moguće odrediti najbolju alternativu promatrajući samo jednu značajku, što ovaj problem čini problemom višekriterijskog odlučivanja.
 
@@ -227,6 +229,8 @@ Patel M. R., Vashi M. P. & Bhatt B. V. (2017). SMART–Multi-criteria decision-m
 Saaty T. L. and Ergu D. (2015). When is a decision-making method trustworthy? Criteria for evaluating multi-criteria decision-making methods. International Journal of Information Technology and Decision Making, 14(6), 1171–1187.
 
 Havranek T. and MacNair D. (2023). Multicriteria Decision Making
+
+Sharma J. K. (2016). Operations Research:Theory and Applications
 
 Scraper:
   https://rapidapi.com/pradeepbardiya13/api/g2-data-api
