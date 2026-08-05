@@ -111,6 +111,8 @@ Zadnji korak je bio prenošenje prevedenih podataka u Shiny okruženje.
 
 **Napomena:** zbog ograničenja besplatnih verzija API servisa podaci se ne dohvaćaju dinamički pri svakom pokretanju aplikacije. Nakon završetka procesa prikupljanja i obrade podaci su spremljeni u CSV datoteke koje se učitavaju lokalno. Stoga splikacija predstavlja **_proof-of-concept_** kojim se demonstrira mogućnost primjene SMART metode u odabiru digitalnih alata za edukaciju, dok bi produkcijska verzija trebala uključiti automatsko dohvaćanje i redovito ažuriranje podataka.
 
+**Napomena:** zbog nedostataka podataka u kategoriji virtualnih učionica u prvoj verziji aplikacije, 29.7. su se prikupili dodatni podatci samo za tu kategoriju. Prikupljanje tih podataka u kodu je naznačeno sa dodavanjem .2 nakon rednog broja koraka.  
+
 ### Implementacija SMART modela
 
 Kriteriji za svaku kategoriju preuzeti su iz G2 _detailed_features_ podataka, svaka funkcionalnost ima postotak zadovoljnih korisnika temeljen na stvarnim recenzijama. Ti postotci (0-100) koriste se direktno kao vrijednost alternativa u SMART modelu, što eliminira potrebu za ručnom normalizacijom podataka.
