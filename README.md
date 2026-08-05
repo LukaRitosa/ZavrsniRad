@@ -38,6 +38,8 @@ Prilikom odabira metode višekriterijskog odlučivanja potrebno je uzeti u obzir
 
 Prednost metode je upotreba linearne funkcije kao funkcije vrijednosti, jednostavnost, odluka koja je nezavisna od alternativa i robustnost na promjene alternativa. Dok su nedostatci povećanje kompleksnisti kod povećanja broja kriterija, brzo odbacivanje nisko rangiranih alternativa, problematično određivanje odgovarajućih vaganja i nekonzistentnost zbog subjektivnog pristupa provedbi metode.
 
+**Dobra odluka** i dobar ishod imaju različito značenje. Dobra odluka može dovesti do lošeg ishoda, dok i loša odluka može dovesti do dobrog ishoda. No prihvaćeno je da je dobra odluka često najbolji (i možda jedini) način za postizanje dobrih ishoda. (T. Havranek, D. MacNair)
+
 
 #### Matematičke formule korištene u radu
 
@@ -216,15 +218,15 @@ Kostelić K. (2025). Uvod u višekriterijsko odlučivanje
 https://rpubs.com/kakoste/uvod_MCDM
 (pristupljeno 21.7.2026.)
 
-Edwards, W., & Barron, F. H. (1994). SMARTS and SMARTER: Improved simple methods for multiattribute utility measurement. Organizational Behavior and Human Decision Processes, 60(3), 306–325.
+Edwards W. & Barron F. H. (1994). SMARTS and SMARTER: Improved simple methods for multiattribute utility measurement. Organizational Behavior and Human Decision Processes, 60(3), 306–325.
 
-Olson, D. L. (1996). Decision aids for selection problems. Journal of the Operational Research Society, 48(5), 541-542. 
+Olson D. L. (1996). Decision aids for selection problems. Journal of the Operational Research Society, 48(5), 541-542. 
 
-Patel, M. R., Vashi, M. P., & Bhatt, B. V. (2017). SMART–Multi-criteria decision-making technique for use in planning activities. New Horizons in Civil Engineering (NHCE 2017), 1–6.
+Patel M. R., Vashi M. P. & Bhatt B. V. (2017). SMART–Multi-criteria decision-making technique for use in planning activities. New Horizons in Civil Engineering (NHCE 2017), 1–6.
 
-Saaty, T. L. and Ergu, D. (2015). When is a decision-making method trustworthy? Criteria for
-evaluating multi-criteria decision-making methods. International Journal of Information Technol-
-ogy and Decision Making, 14(6), 1171–1187.
+Saaty T. L. and Ergu D. (2015). When is a decision-making method trustworthy? Criteria for evaluating multi-criteria decision-making methods. International Journal of Information Technology and Decision Making, 14(6), 1171–1187.
+
+Havranek T. and MacNair D. (2023). Multicriteria Decision Making
 
 Scraper:
   https://rapidapi.com/pradeepbardiya13/api/g2-data-api
@@ -233,8 +235,3 @@ G2API:
   https://documentation.g2.com/docs/developer-portal
   
 
-
-  ## Upute korištenja
-
-
-možda maknut
