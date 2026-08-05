@@ -30,7 +30,7 @@ Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2
 
 ### Teorijska podloga
 
-Pristup **operacijskih istraživanja** pomaže u usporedbi alternativa, odnosno pomaže u prosudbi donositelju odluka, nije zamjena za prosudbu (Sharma, 2016).
+Pristup **operacijskih istraživanja** pomaže u usporedbi alternativa, odnosno pomaže u prosudbi donositelju odluka i nije zamjena za prosudbu (Sharma, 2016).
 
 Kod problema odabira digitalnih nastavnih alata nastavnici pri odabiru ne razmatraju samo jednu karakteristiku alata, već istodobno uzimaju u obzir više međusobno različitih kriterija. Budući da neki alati mogu biti bolji prema jednom, a lošiji prema drugom kriteriju, nije moguće odrediti najbolju alternativu promatrajući samo jednu značajku, što ovaj problem čini problemom višekriterijskog odlučivanja.
 
