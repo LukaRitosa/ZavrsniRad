@@ -120,11 +120,17 @@ Zadnji korak je bio prenošenje prevedenih podataka u Shiny okruženje.
 
 Kriteriji za svaku kategoriju preuzeti su iz G2 _detailed_features_ podataka, svaka funkcionalnost ima postotak zadovoljnih korisnika temeljen na stvarnim recenzijama. Ti postotci (0-100) koriste se direktno kao vrijednost alternativa u SMART modelu, što eliminira potrebu za ručnom normalizacijom podataka.
 
+**Biranje kategorije**
+
+Početna stranica aplikacija nudi odabir između tri kategorije edukacijskih alata (upravljanje učionicom, procjena znanja i virtualna učionica), svaka kategorija ima različite kriterije i nudi drugačije alate.
+
+<img width="1916" height="925" alt="pocetna" src="https://github.com/user-attachments/assets/da946b82-6034-4dbc-a4ab-61c6a3cda458" />
+
+
 **Odabir kriterija**
 
 Prvi korak omogućuje korisniku odabir kriterija koje želi uzeti u obzir pri odlučivanju. Time se iz analize mogu isključiti funkcionalnosti koje korisniku nisu važne.
 
-*_screenshot_
 
 <img width="1918" height="916" alt="biranje_kriterija2" src="https://github.com/user-attachments/assets/ccf5c224-804b-4425-ada3-1f4e35e76a54" />
 
@@ -133,7 +139,6 @@ Prvi korak omogućuje korisniku odabir kriterija koje želi uzeti u obzir pri od
 
 Nakon odabira kriterija korisnik ih raspoređuje metodom _drag and drop_ od najvažnijeg prema najmanje važnom. Dobivani korak koristi se kao osnova za određivanje relativnih težina kriterija.
 
-*_screenshot_
 
 
 <img width="1918" height="917" alt="rangiranje" src="https://github.com/user-attachments/assets/e5d8e157-1a07-4b2a-b22c-b2db5eeb4238" />
@@ -154,7 +159,6 @@ Na temelju omjera izračunavaju se težine kriterija. Izračun započinje od pos
         tezine_norm <- tezine / sum(tezine)
 
 
-*_screenshot_
 
 <img width="1917" height="908" alt="tezine" src="https://github.com/user-attachments/assets/526f48db-4ddc-4fa1-9416-0ebfc8435caf" />
 
@@ -164,7 +168,6 @@ Na temelju omjera izračunavaju se težine kriterija. Izračun započinje od pos
 Nakon određivanja normaliziranih težina, za svaki alat računa se ukupni SMART rezultat. Svaka funkcionalnost alata množi se pripadajućom težinom kriterija, a zatim se svi umnošci zbrajaju. Budući da su vrijednosti kriterija izražene kao postotak zadovoljnih korisnika, nije bila potrebna dodatna normalizacija podataka. Alat s najvećim ukupnim rezultatom smatra se najprikladnijim izborom za zadane korisničke preferencije.
 Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno prema ostvarenom rezultatu te se korisniku prikaže preporučeni alat (sa linkom na G2 stranicu alata i G2 recenzijom alata) zajedno sa kompletnom rang-listom.
 
-*_screenshot_
 
 <img width="1918" height="916" alt="rez" src="https://github.com/user-attachments/assets/31b08660-620e-4eb5-a041-e972cb43ca4a" />
 
