@@ -14,9 +14,9 @@ Luka Ritoša
 
 **Mentor:** doc. dr. sc. Katarina Kostelić
 
-<img width="2664" height="700" alt="slika" src="https://github.com/user-attachments/assets/dd51b9a2-8d6e-45fa-84a2-2e175dde0986" />
-
 **Link za aplikaciju:** https://luka-ritosa.shinyapps.io/eduToolSMART/
+
+<img width="2664" height="700" alt="slika" src="https://github.com/user-attachments/assets/dd51b9a2-8d6e-45fa-84a2-2e175dde0986" />
 
 
 ## Uvod
@@ -25,7 +25,7 @@ Luka Ritoša
 
 U periodu digitaliziranja edukacije nastavnici su preplavljeni raznim alatima za nastavu. Cilj ovog rada je razvoj aplikacije za potporu odlučivanju pri odabiru nastavnih alata. 
 
-EduToolSelector (ili koji bod naziv bude bio na kraju) je Shiny aplikacija koristi SMART metodu za prijedlog alata određene kategorije, tako da korisnik bira bitne kriterije, rangira ih i dodjeljuje koliko je puta npr. kriterij x2 važniji od kriterija x1. 
+Shiny aplikacija eduTool SMART selektor koristi SMART metodu za prijedlog alata određene kategorije, tako da korisnik bira bitne kriterije, rangira ih i dodjeljuje koliko je puta npr. kriterij x2 važniji od kriterija x1. 
 
 Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2 API-a i Rapid API web scraper-a.  
 
