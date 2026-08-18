@@ -126,11 +126,18 @@ Prvi korak omogućuje korisniku odabir kriterija koje želi uzeti u obzir pri od
 
 *_screenshot_
 
+<img width="1918" height="916" alt="biranje_kriterija2" src="https://github.com/user-attachments/assets/ccf5c224-804b-4425-ada3-1f4e35e76a54" />
+
+
 **Rangiranje kriterija**
 
 Nakon odabira kriterija korisnik ih raspoređuje metodom _drag and drop_ od najvažnijeg prema najmanje važnom. Dobivani korak koristi se kao osnova za određivanje relativnih težina kriterija.
 
 *_screenshot_
+
+
+<img width="1918" height="917" alt="rangiranje" src="https://github.com/user-attachments/assets/e5d8e157-1a07-4b2a-b22c-b2db5eeb4238" />
+
 
 **Određivanje težina (Swing Weighting)**
 
@@ -149,6 +156,8 @@ Na temelju omjera izračunavaju se težine kriterija. Izračun započinje od pos
 
 *_screenshot_
 
+<img width="1917" height="908" alt="tezine" src="https://github.com/user-attachments/assets/526f48db-4ddc-4fa1-9416-0ebfc8435caf" />
+
 
 **Rezultat**
 
@@ -156,6 +165,9 @@ Nakon određivanja normaliziranih težina, za svaki alat računa se ukupni SMART
 Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno prema ostvarenom rezultatu te se korisniku prikaže preporučeni alat (sa linkom na G2 stranicu alata i G2 recenzijom alata) zajedno sa kompletnom rang-listom.
 
 *_screenshot_
+
+<img width="1918" height="916" alt="rez" src="https://github.com/user-attachments/assets/31b08660-620e-4eb5-a041-e972cb43ca4a" />
+
 
 
 **Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pas u sve vrijednosti već izražene na istoj mjernoj ljestvici.
