@@ -58,6 +58,28 @@ Luka Ritoša
 [Literatura i izvori](#literatura-i-izvori)
 
 
+## Sadržaj
+
+- [Uvod](#uvod)
+- [Razrada](#razrada)
+- [Teorijska podloga](#teorijska-podloga)
+- [Matematičke formule korištene u radu](#matematičke-formule-korištene-u-radu)
+- [Prikupljanje i priprema podataka](#prikupljanje-i-priprema-podataka)
+- [Implementacija SMART modela](#implementacija-smart-modela)
+  - [Biranje kategorije](#biranje-kategorije)
+  - [Odabir kriterija](#odabir-kriterija)
+  - [Rangiranje kriterija](#rangiranje-kriterija)
+  - [Određivanje težina (Swing Weighting)](#određivanje-težina-(swing-weighting))
+  - [Rezultat](#rezultat)
+- [Shiny aplikacija](#shiny-aplikacija)
+  - [Arhitektura](#arhitektura)
+  - [Dinamičko generiranje korisničkog sučelja](#dinamičko-generiranje-korisničkog-sučelja)
+  - [User flow](#user-flow)
+- [Zaključak](#zaključak)
+- [Ograničenja](#ograničenja)
+- [Moguća poboljšanja](#moguća-poboljšanja)
+- [Literatura i izvori](#literatura-i-izvori)
+
 ## Uvod
 
 **Dobra odluka** i dobar ishod imaju različito značenje. Dobra odluka može dovesti do lošeg ishoda, dok i loša odluka može dovesti do dobrog ishoda. No generalno je prihvaćeno da su dobre odluke često najbolji (i možda jedini) način za postizanje dobrih ishoda (Havranek i MacNair, 2023).
