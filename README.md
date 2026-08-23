@@ -18,6 +18,45 @@ Luka Ritoša
 
 <img width="2664" height="700" alt="slika" src="https://github.com/user-attachments/assets/dd51b9a2-8d6e-45fa-84a2-2e175dde0986" />
 
+Uvod
+[Uvod](#uvod)
+
+## Razrada 
+
+### Teorijska podloga
+
+#### Matematičke formule korištene u radu
+
+### Prikupljanje i priprema podataka
+
+### Implementacija SMART modela
+
+#### Biranje kategorije
+
+#### Odabir kriterija
+
+#### Rangiranje kriterija
+
+#### Određivanje težina (Swing Weighting)
+
+#### Rezultat
+
+### Shiny aplikacija
+
+#### Arhitektura
+
+#### Dinamičko generiranje korisničkog sučelja
+
+#### _User flow_
+
+## Zaključak 
+
+### Ograničenja
+
+### Moguća poboljšanja
+
+## Literatura i izvori
+
 
 ## Uvod
 
