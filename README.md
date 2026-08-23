@@ -19,11 +19,11 @@ Luka Ritoša
 <img width="2664" height="700" alt="slika" src="https://github.com/user-attachments/assets/dd51b9a2-8d6e-45fa-84a2-2e175dde0986" />
 
 
-[Uvod](#uvod)
+- [Uvod](#uvod)
 
-[Razrada](#razrada)
+- [Razrada](#razrada)
 
-[Teorijska podloga](#teorijska-podloga)
+-[Teorijska podloga](#teorijska-podloga)
 
 [Matematičke formule korištene u radu](#matematičke-formule-korištene-u-radu)
 
@@ -57,28 +57,6 @@ Luka Ritoša
 
 [Literatura i izvori](#literatura-i-izvori)
 
-
-## Sadržaj
-
-- [Uvod](#uvod)
-- [Razrada](#razrada)
-- [Teorijska podloga](#teorijska-podloga)
-- [Matematičke formule korištene u radu](#matematičke-formule-korištene-u-radu)
-- [Prikupljanje i priprema podataka](#prikupljanje-i-priprema-podataka)
-- [Implementacija SMART modela](#implementacija-smart-modela)
-  - [Biranje kategorije](#biranje-kategorije)
-  - [Odabir kriterija](#odabir-kriterija)
-  - [Rangiranje kriterija](#rangiranje-kriterija)
-  - [Određivanje težina (Swing Weighting)](#određivanje-težina-(swing-weighting))
-  - [Rezultat](#rezultat)
-- [Shiny aplikacija](#shiny-aplikacija)
-  - [Arhitektura](#arhitektura)
-  - [Dinamičko generiranje korisničkog sučelja](#dinamičko-generiranje-korisničkog-sučelja)
-  - [User flow](#user-flow)
-- [Zaključak](#zaključak)
-- [Ograničenja](#ograničenja)
-- [Moguća poboljšanja](#moguća-poboljšanja)
-- [Literatura i izvori](#literatura-i-izvori)
 
 ## Uvod
 
