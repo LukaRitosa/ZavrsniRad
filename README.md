@@ -23,39 +23,39 @@ Luka Ritoša
 
 - [Razrada](#razrada)
 
--[Teorijska podloga](#teorijska-podloga)
+  - [Teorijska podloga](#teorijska-podloga)
 
-[Matematičke formule korištene u radu](#matematičke-formule-korištene-u-radu)
+    - [Matematičke formule korištene u radu](#matematičke-formule-korištene-u-radu)
 
-[Prikupljanje i priprema podataka](#prikupljanje-i-priprema-podataka)
+  - [Prikupljanje i priprema podataka](#prikupljanje-i-priprema-podataka)
 
-[Implementacija SMART modela](#implementacija-smart-modela)
+  - [Implementacija SMART modela](#implementacija-smart-modela)
 
-[Biranje kategorije](#biranje-kategorije)
+    - [Biranje kategorije](#biranje-kategorije)
 
-[Odabir kriterija](#odabir-kriterija)
+    - [Odabir kriterija](#odabir-kriterija)
 
-[Rangiranje kriterija](#rangiranje-kriterija)
+    - [Rangiranje kriterija](#rangiranje-kriterija)
 
-[Određivanje težina (Swing Weighting)](#određivanje-težina-(swing-weighting))
+    - [Određivanje težina (Swing Weighting)](#određivanje-težina-(swing-weighting))
 
-[Rezultat](#rezultat)
+    - [Rezultat](#rezultat)
 
-[Shiny aplikacija](#shiny-aplikacija)
+  - [Shiny aplikacija](#shiny-aplikacija)
 
-[Arhitektura](#arhitektura)
+    - [Arhitektura](#arhitektura)
 
-[Dinamičko generiranje korisničkog sučelja](#dinamičko-generiranje-korisničkog-sučelja)
+    - [Dinamičko generiranje korisničkog sučelja](#dinamičko-generiranje-korisničkog-sučelja)
 
-[User flow](#user-flow)
+    - [User flow](#user-flow)
 
-[Zaključak](#zaključak)
+- [Zaključak](#zaključak)
 
-[Ograničenja](#ograničenja)
+  - [Ograničenja](#ograničenja)
 
-[Moguća poboljšanja](#moguća-poboljšanja)
+  - [Moguća poboljšanja](#moguća-poboljšanja)
 
-[Literatura i izvori](#literatura-i-izvori)
+- [Literatura i izvori](#literatura-i-izvori)
 
 
 ## Uvod
