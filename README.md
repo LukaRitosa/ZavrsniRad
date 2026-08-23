@@ -25,7 +25,7 @@ Luka Ritoša
 
 U periodu digitaliziranja edukacije nastavnici su preplavljeni raznim alatima za nastavu. Cilj ovog rada je razvoj aplikacije za potporu odlučivanju pri odabiru nastavnih alata. 
 
-Shiny aplikacija eduTool SMART selektor koristi SMART metodu za prijedlog alata određene kategorije, tako da korisnik bira bitne kriterije, rangira ih i dodjeljuje koliko je puta npr. kriterij x2 važniji od kriterija x1. 
+Shiny aplikacija eduTool SMART selektor koristi SMART metodu za prijedlog alata određene kategorije, tako da korisnik bira bitne kriterije, rangira ih te dodjeljuje intenzitet međusobne razlike važnosti između kriterija (koliko je puta kriterij x2 važniji od kriterija x1... koliko je puta kriterij xn važniji od kriterija xn-1). 
 
 Projekt uključuje prikupljanje podataka u Pyhton virtualnom okruženju preko G2 API-a i Rapid API web scraper-a.  
 
