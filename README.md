@@ -165,6 +165,7 @@ Kriteriji za svaku kategoriju preuzeti su iz G2 _detailed_features_ podataka, sv
 Početna stranica aplikacija nudi odabir između tri kategorije edukacijskih alata (upravljanje učionicom, procjena znanja i virtualna učionica), svaka kategorija ima različite kriterije i nudi drugačije alate.
 
 <img width="1916" height="925" alt="pocetna" src="https://github.com/user-attachments/assets/da946b82-6034-4dbc-a4ab-61c6a3cda458" />
+
 _Snimka zaslona izbornika kategorija_
 
 #### Odabir kriterija
@@ -173,7 +174,8 @@ Prvi korak omogućuje korisniku odabir kriterija koje želi uzeti u obzir pri od
 
 
 <img width="1918" height="916" alt="biranje_kriterija2" src="https://github.com/user-attachments/assets/ccf5c224-804b-4425-ada3-1f4e35e76a54" />
-_Snimka zaslona odabira kriterija za_
+
+_Snimka zaslona odabira kriterija za kategoriju virtualna učionica_
 
 #### Rangiranje kriterija
 
@@ -183,6 +185,7 @@ Nakon odabira kriterija korisnik ih raspoređuje metodom _drag and drop_ od najv
 
 <img width="1918" height="917" alt="rangiranje" src="https://github.com/user-attachments/assets/e5d8e157-1a07-4b2a-b22c-b2db5eeb4238" />
 
+_Snimka zaslona rangiranja odabranih kriterija za kategoriju virtualna učionica_
 
 #### Određivanje težina (Swing Weighting)
 
@@ -202,6 +205,7 @@ Na temelju omjera izračunavaju se težine kriterija. Izračun započinje od pos
 
 <img width="1917" height="908" alt="tezine" src="https://github.com/user-attachments/assets/526f48db-4ddc-4fa1-9416-0ebfc8435caf" />
 
+_Snimka zaslona dodjeljivanja težina rangiranih kriterija za kategoriju virtualna učionica_
 
 #### Rezultat
 
@@ -211,6 +215,7 @@ Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno 
 
 <img width="1918" height="916" alt="rez" src="https://github.com/user-attachments/assets/31b08660-620e-4eb5-a041-e972cb43ca4a" />
 
+_Snimka zaslona preporučenog alata za kategoriju virtualna učionica_
 
 
 **Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pas u sve vrijednosti već izražene na istoj mjernoj ljestvici.
