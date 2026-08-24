@@ -165,7 +165,7 @@ Kriteriji za svaku kategoriju preuzeti su iz G2 _detailed_features_ podataka, sv
 Početna stranica aplikacija nudi odabir između tri kategorije edukacijskih alata (upravljanje učionicom, procjena znanja i virtualna učionica), svaka kategorija ima različite kriterije i nudi drugačije alate.
 
 <img width="1916" height="925" alt="pocetna" src="https://github.com/user-attachments/assets/da946b82-6034-4dbc-a4ab-61c6a3cda458" />
-
+_Snimka zaslona izbornika kategorija_
 
 #### Odabir kriterija
 
@@ -173,7 +173,7 @@ Prvi korak omogućuje korisniku odabir kriterija koje želi uzeti u obzir pri od
 
 
 <img width="1918" height="916" alt="biranje_kriterija2" src="https://github.com/user-attachments/assets/ccf5c224-804b-4425-ada3-1f4e35e76a54" />
-
+_Snimka zaslona odabira kriterija za_
 
 #### Rangiranje kriterija
 
