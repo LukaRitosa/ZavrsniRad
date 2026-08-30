@@ -2,9 +2,9 @@
 
 # Shiny App for Assisting with Choosing Digital Tools for Education Utilizing the SMART Method
 
-**Luka Ritoša**
+**Završni rad**
 
-**JMBAG**: HR: 0303115039, redoviti student
+**Luka Ritoša**
 
 **Sveučilište:** Sveučilište Juraja Dobrile u Puli
 
@@ -12,7 +12,17 @@
 
 **Akademska godina:** 2025/2026
 
-**Kolegij:** Operacijska istraživanja
+JMBAG: HR: 0303115039, redoviti student
+
+**Studijski smjer:** Informatika
+ 
+**Predmet:** Operacijska Istraživanja
+
+**Znanstveno područje:**
+
+**Znanstveno polje:**
+
+**Znanstvena grana:**
 
 **Mentor:** doc. dr. sc. Katarina Kostelić
 
@@ -62,6 +72,24 @@
 
 - [Literatura i izvori](#literatura-i-izvori)
 
+
+IZJAVA O AKADEMSKOJ ČESTITOSTI 
+
+Ja, dolje potpisani Luka Ritoša kandidat za prvostupnika Informatike ovime izjavljujem da je ovaj Završni rad rezultat isključivo mojega vlastitog rada, da se temelji na mojim istraživanjima te da se oslanja na objavljenu literaturu kao što to pokazuju korištene bilješke i bibliografija. Izjavljujem da niti jedan dio Završnog rada nije napisan na nedozvoljen način, odnosno da je prepisan iz kojega necitiranog rada, te da ikoji dio rada krši bilo čija autorska prava. Izjavljujem, također, da nijedan dio rada nije iskorišten za koji drugi rad pri bilo kojoj drugoj visokoškolskoj, znanstvenoj ili radnoj ustanovi.
+
+Student
+Luka Ritoša
+
+U Puli, Rujan, 2026. godine
+
+IZJAVA o korištenju autorskog djela 
+
+Ja, Luka Ritoša dajem odobrenje Sveučilištu Jurja Dobrile u Puli, kao nositelju prava iskorištavanja, da moj završni rad pod nazivom Shiny aplikacija za pomoć pri odabiru digitalnih alata za edukaciju koristeći SMART metodu koristi na način da gore navedeno autorsko djelo, kao cjeloviti tekst trajno objavi u javnoj internetskoj bazi Sveučilišne knjižnice Sveučilišta Jurja Dobrile u Puli te kopira u javnu internetsku bazu završnih radova Nacionalne i sveučilišne knjižnice (stavljanje na raspolaganje javnosti), sve u skladu s Zakonom o autorskom pravu i drugim srodnim pravima i dobrom akademskom praksom, a radi promicanja otvorenoga, slobodnoga pristupa znanstvenim informacijama. Za korištenje autorskog djela na gore navedeni način ne potražujem naknadu. 
+
+U Puli, 30.8.2026.
+
+Potpis
+Luka Ritoša
 
 ## Uvod
 
