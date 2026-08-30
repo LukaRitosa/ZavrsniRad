@@ -189,7 +189,7 @@ _Snimka zaslona rangiranja odabranih kriterija za kategoriju virtualna učionica
 
 #### Određivanje težina (Swing Weighting)
 
-Samo rangiranje ne govori koliko je jedan kriterij važniji od drugoga, korisnik zatim određuje omjer važnosti između susjednih kriterija. Za svaki par kriterija odgovara na pitanje "Koliko Vam je kriterij A bitniji od kriterija B?", odgovori se izražavaju u omjerima 2-10.
+Samo rangiranje ne govori koliko je jedan kriterij važniji od drugoga, korisnik zatim određuje omjer važnosti između susjednih kriterija. Za svaki par kriterija odgovara na pitanje "Koliko Vam je puta kriterij A bitniji od kriterija B?", odgovori se izražavaju u omjerima 2-10.
 
 Na temelju omjera izračunavaju se težine kriterija. Izračun započinje od posljednjeg kriterija kojem se dodjeljuje početna vrijednost 10, nakon čega se težine računaju unatrag množenjem s odabranim omjerima:
 
@@ -218,7 +218,7 @@ Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno 
 _Snimka zaslona preporučenog alata za kategoriju virtualna učionica_
 
 
-**Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pas u sve vrijednosti već izražene na istoj mjernoj ljestvici.
+**Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pa su sve vrijednosti već izražene na istoj mjernoj ljestvici.
 
 ### Shiny aplikacija
 
@@ -293,9 +293,9 @@ Patel M. R., Vashi M. P. & Bhatt B. V. (2017). SMART–Multi-criteria decision-m
 
 Saaty T. L. and Ergu D. (2015). When is a decision-making method trustworthy? Criteria for evaluating multi-criteria decision-making methods. International Journal of Information Technology and Decision Making, 14(6), 1171–1187.
 
-Havranek T. and MacNair D. (2023). Multicriteria Decision Making
+Havranek, T., MacNair, D., & Wolf, J. (2023). Multicriteria Decision Making: Systems Modeling, Risk Assessment, and Financial Analysis for Technical Projects. De Gruyter.
 
-Sharma J. K. (2016). Operations Research:Theory and Applications
+Sharma, J. (2016). Operations research: theory and applications (6th Editio).
 
 Scraper:
   https://rapidapi.com/pradeepbardiya13/api/g2-data-api
