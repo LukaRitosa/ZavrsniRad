@@ -162,34 +162,34 @@ Kriteriji za svaku kategoriju preuzeti su iz G2 _detailed_features_ podataka, sv
 
 #### Biranje kategorije
 
-Početna stranica aplikacija nudi odabir između tri kategorije edukacijskih alata (upravljanje učionicom, procjena znanja i virtualna učionica), svaka kategorija ima različite kriterije i nudi drugačije alate.
+Početna stranica aplikacija nudi odabir između tri kategorije edukacijskih alata (upravljanje učionicom, procjena znanja i virtualna učionica), svaka kategorija ima različite kriterije i nudi drugačije alate (Slika 1).
 
 <img width="1916" height="925" alt="pocetna" src="https://github.com/user-attachments/assets/da946b82-6034-4dbc-a4ab-61c6a3cda458" />
 
-_Snimka zaslona izbornika kategorija_
+_Slika 1. Snimka zaslona izbornika kategorija_
 
 #### Odabir kriterija
 
-Prvi korak omogućuje korisniku odabir kriterija koje želi uzeti u obzir pri odlučivanju. Time se iz analize mogu isključiti funkcionalnosti koje korisniku nisu važne.
+Prvi korak omogućuje korisniku odabir kriterija koje želi uzeti u obzir pri odlučivanju (Slika 2). Time se iz analize mogu isključiti funkcionalnosti koje korisniku nisu važne.
 
 
 <img width="1918" height="916" alt="biranje_kriterija2" src="https://github.com/user-attachments/assets/ccf5c224-804b-4425-ada3-1f4e35e76a54" />
 
-_Snimka zaslona odabira kriterija za kategoriju virtualna učionica_
+_Slika 2. Snimka zaslona odabira kriterija za kategoriju virtualna učionica_
 
 #### Rangiranje kriterija
 
-Nakon odabira kriterija korisnik ih raspoređuje metodom _drag and drop_ od najvažnijeg prema najmanje važnom. Dobivani korak koristi se kao osnova za određivanje relativnih težina kriterija.
+Nakon odabira kriterija korisnik ih raspoređuje metodom _drag and drop_ od najvažnijeg prema najmanje važnom (Slika 3). Dobivani korak koristi se kao osnova za određivanje relativnih težina kriterija.
 
 
 
 <img width="1918" height="917" alt="rangiranje" src="https://github.com/user-attachments/assets/e5d8e157-1a07-4b2a-b22c-b2db5eeb4238" />
 
-_Snimka zaslona rangiranja odabranih kriterija za kategoriju virtualna učionica_
+_Slika 3. Snimka zaslona rangiranja odabranih kriterija za kategoriju virtualna učionica_
 
 #### Određivanje težina (Swing Weighting)
 
-Samo rangiranje ne govori koliko je jedan kriterij važniji od drugoga, korisnik zatim određuje omjer važnosti između susjednih kriterija. Za svaki par kriterija odgovara na pitanje "Koliko Vam je puta kriterij A bitniji od kriterija B?", odgovori se izražavaju u omjerima 2-10.
+Samo rangiranje ne govori koliko je jedan kriterij važniji od drugoga, korisnik zatim određuje omjer važnosti između susjednih kriterija. Za svaki par kriterija odgovara na pitanje "Koliko Vam je puta kriterij A bitniji od kriterija B?", odgovori se izražavaju u omjerima 2-10 (Slika 4).
 
 Na temelju omjera izračunavaju se težine kriterija. Izračun započinje od posljednjeg kriterija kojem se dodjeljuje početna vrijednost 10, nakon čega se težine računaju unatrag množenjem s odabranim omjerima:
 
@@ -205,17 +205,17 @@ Na temelju omjera izračunavaju se težine kriterija. Izračun započinje od pos
 
 <img width="1917" height="908" alt="tezine" src="https://github.com/user-attachments/assets/526f48db-4ddc-4fa1-9416-0ebfc8435caf" />
 
-_Snimka zaslona dodjeljivanja težina rangiranih kriterija za kategoriju virtualna učionica_
+_Slika 4. Snimka zaslona dodjeljivanja težina rangiranih kriterija za kategoriju virtualna učionica_
 
 #### Rezultat
 
 Nakon određivanja normaliziranih težina, za svaki alat računa se ukupni SMART rezultat. Svaka funkcionalnost alata množi se pripadajućom težinom kriterija, a zatim se svi umnošci zbrajaju. Budući da su vrijednosti kriterija izražene kao postotak zadovoljnih korisnika, nije bila potrebna dodatna normalizacija podataka. Alat s najvećim ukupnim rezultatom smatra se najprikladnijim izborom za zadane korisničke preferencije.
-Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno prema ostvarenom rezultatu te se korisniku prikaže preporučeni alat (sa linkom na G2 stranicu alata i G2 recenzijom alata) zajedno sa kompletnom rang-listom.
+Dobiveni SMART skor predstavlja ukupnu ocjenu alata. Alati se sortiraju silazno prema ostvarenom rezultatu te se korisniku prikaže preporučeni alat (sa linkom na G2 stranicu alata i G2 recenzijom alata) zajedno sa kompletnom rang-listom (Slika 5).
 
 
 <img width="1918" height="916" alt="rez" src="https://github.com/user-attachments/assets/31b08660-620e-4eb5-a041-e972cb43ca4a" />
 
-_Snimka zaslona preporučenog alata za kategoriju virtualna učionica_
+_Slika 5. Snimka zaslona preporučenog alata za kategoriju virtualna učionica_
 
 
 **Napomena:** u klasičnoj SMART metodi vrijednosti alternative često se prethodno normaliziraju kako bi bile usporedive. U ovom radu taj korak nije bio potreban jer G2 za svaku funkcionalnost već daje postotak zadovoljnih korisnika (0-100), pa su sve vrijednosti već izražene na istoj mjernoj ljestvici.
