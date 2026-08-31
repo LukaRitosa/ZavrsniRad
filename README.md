@@ -79,6 +79,7 @@ Ja, dolje potpisani Luka Ritoša kandidat za prvostupnika Informatike ovime izj
 
 <p align="right">
  Student
+ 
  Luka Ritoša
 </p>
 
