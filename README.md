@@ -101,6 +101,8 @@ Potpis
 <p align="right">
 Luka Ritoša
 </p>
+
+
 ## Uvod
 
 **Dobra odluka** i dobar ishod imaju različito značenje. Dobra odluka može dovesti do lošeg ishoda, dok i loša odluka može dovesti do dobrog ishoda. No generalno je prihvaćeno da su dobre odluke često najbolji (i možda jedini) način za postizanje dobrih ishoda (Havranek i MacNair, 2023).
