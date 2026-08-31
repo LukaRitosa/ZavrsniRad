@@ -183,7 +183,7 @@ gdje je:
 
 ### Prikupljanje i priprema podataka
 
-Izvor podataka je G2 (https://www.g2.com/). G2 je web stranica sa recenzijama poslovnih software alata, te jedna od kategorija je edukacija.
+Izvor podataka je G2. G2 je web stranica sa recenzijama poslovnih software alata, te jedna od kategorija je edukacija.
 
 G2 API se koristio za prikupljanje kategorija i alata u tim kategorijama, dok je za podatke o karakteristikama alata (recenzije za specifične funkcionalnosti) korišten scraper RapidAPI. Python dio projekta je podijeljen u 8 koraka.
 
@@ -349,10 +349,13 @@ Sharma, J. (2016). Operations research: theory and applications (6th Editio).
 
 ### Internet izvori
 
-Scraper
+G2 (2026). G2: Business software and services reviews. 
+ https://www.g2.com/
+
+G2 Data API. RapidAPI. 
   https://rapidapi.com/pradeepbardiya13/api/g2-data-api
 
-G2API
+G2API (2026). G2 Developer Portal. 
   https://documentation.g2.com/docs/developer-portal
   
 L.Ritoša (2026). eduToolSMART aplikacija
