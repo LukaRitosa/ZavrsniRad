@@ -331,10 +331,6 @@ Moguća poboljšanja:
 
 ### Knjige i članci
 
-Kostelić K. (2025). Uvod u višekriterijsko odlučivanje
-https://rpubs.com/kakoste/uvod_MCDM
-(pristupljeno 21.7.2026.)
-
 Edwards W. & Barron F. H. (1994). SMARTS and SMARTER: Improved simple methods for multiattribute utility measurement. Organizational Behavior and Human Decision Processes, 60(3), 306–325.
 
 Olson D. L. (1996). Decision aids for selection problems. Journal of the Operational Research Society, 48(5), 541-542. 
@@ -349,6 +345,15 @@ Sharma, J. (2016). Operations research: theory and applications (6th Editio).
 
 ### Internet izvori
 
+L.Ritoša (2026). eduToolSMART aplikacija
+ https://luka-ritosa.shinyapps.io/eduToolSMART/
+
+L.Ritoša (2026). GitHub repozitorij 
+ https://github.com/LukaRitosa/ZavrsniRad/
+
+Kostelić K. (2025). Uvod u višekriterijsko odlučivanje
+ https://rpubs.com/kakoste/uvod_MCDM (pristupljeno 21.7.2026.)
+
 G2 (2026). G2: Business software and services reviews. 
  https://www.g2.com/
 
@@ -358,8 +363,3 @@ G2 Data API. RapidAPI.
 G2API (2026). G2 Developer Portal. 
   https://documentation.g2.com/docs/developer-portal
   
-L.Ritoša (2026). eduToolSMART aplikacija
- https://luka-ritosa.shinyapps.io/eduToolSMART/
-
-L.Ritoša (2026). GitHub repozitorij 
- https://github.com/LukaRitosa/ZavrsniRad/
