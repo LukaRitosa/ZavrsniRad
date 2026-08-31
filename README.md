@@ -72,6 +72,8 @@ JMBAG: HR: 0303115039, redoviti student
 
 - [Literatura i izvori](#literatura-i-izvori)
 
+<hr>
+
 <p align="center">
 IZJAVA O AKADEMSKOJ ČESTITOSTI 
 </p>
@@ -86,6 +88,8 @@ Ja, dolje potpisani Luka Ritoša kandidat za prvostupnika Informatike ovime izj
 </p>
 
 U Puli, Rujan, 2026. godine
+
+<hr>
 
 <p align="center">
 IZJAVA o korištenju autorskog djela 
@@ -102,6 +106,7 @@ Potpis
 Luka Ritoša
 </p>
 
+<hr>
 
 ## Uvod
 
