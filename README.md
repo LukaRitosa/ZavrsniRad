@@ -71,6 +71,9 @@ JMBAG: HR: 0303115039, redoviti student
   - [Moguća poboljšanja](#moguća-poboljšanja)
 
 - [Literatura i izvori](#literatura-i-izvori)
+  - [Knjige i članci](#knjige-i-članci)
+  - [Internet izvori](#internet-izvori)
+
 
 <hr>
 
@@ -330,6 +333,8 @@ Moguća poboljšanja:
 
 ## Literatura i izvori
 
+### Knjige i članci
+
 Kostelić K. (2025). Uvod u višekriterijsko odlučivanje
 https://rpubs.com/kakoste/uvod_MCDM
 (pristupljeno 21.7.2026.)
@@ -345,6 +350,8 @@ Saaty T. L. and Ergu D. (2015). When is a decision-making method trustworthy? Cr
 Havranek, T., MacNair, D., & Wolf, J. (2023). Multicriteria Decision Making: Systems Modeling, Risk Assessment, and Financial Analysis for Technical Projects. De Gruyter.
 
 Sharma, J. (2016). Operations research: theory and applications (6th Editio).
+
+### Internet izvori
 
 Scraper:
   https://rapidapi.com/pradeepbardiya13/api/g2-data-api
