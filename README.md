@@ -77,8 +77,10 @@ IZJAVA O AKADEMSKOJ ČESTITOSTI 
 
 Ja, dolje potpisani Luka Ritoša kandidat za prvostupnika Informatike ovime izjavljujem da je ovaj Završni rad rezultat isključivo mojega vlastitog rada, da se temelji na mojim istraživanjima te da se oslanja na objavljenu literaturu kao što to pokazuju korištene bilješke i bibliografija. Izjavljujem da niti jedan dio Završnog rada nije napisan na nedozvoljen način, odnosno da je prepisan iz kojega necitiranog rada, te da ikoji dio rada krši bilo čija autorska prava. Izjavljujem, također, da nijedan dio rada nije iskorišten za koji drugi rad pri bilo kojoj drugoj visokoškolskoj, znanstvenoj ili radnoj ustanovi.
 
-Student
-Luka Ritoša
+<p align="right">
+ Student
+ Luka Ritoša
+</p>
 
 U Puli, Rujan, 2026. godine
 
