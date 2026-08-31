@@ -345,10 +345,10 @@ Sharma, J. (2016). Operations research: theory and applications (6th Editio).
 
 ### Internet izvori
 
-L.Ritoša (2026). eduToolSMART aplikacija
+Ritoša L. (2026). eduToolSMART aplikacija
  https://luka-ritosa.shinyapps.io/eduToolSMART/
 
-L.Ritoša (2026). GitHub repozitorij 
+Ritoša L. (2026). GitHub repozitorij 
  https://github.com/LukaRitosa/ZavrsniRad/
 
 Kostelić K. (2025). Uvod u višekriterijsko odlučivanje
