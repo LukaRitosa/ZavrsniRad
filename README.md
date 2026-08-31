@@ -26,10 +26,6 @@ JMBAG: HR: 0303115039, redoviti student
 
 **Mentor:** doc. dr. sc. Katarina Kostelić
 
-**Link za aplikaciju:** https://luka-ritosa.shinyapps.io/eduToolSMART/
-
-**Link za GitHub:** https://github.com/LukaRitosa/ZavrsniRad/
-
 <img width="2664" height="700" alt="slika" src="https://github.com/user-attachments/assets/dd51b9a2-8d6e-45fa-84a2-2e175dde0986" />
 
 ## Sadržaj
@@ -353,10 +349,14 @@ Sharma, J. (2016). Operations research: theory and applications (6th Editio).
 
 ### Internet izvori
 
-Scraper:
+Scraper
   https://rapidapi.com/pradeepbardiya13/api/g2-data-api
 
-G2API:
+G2API
   https://documentation.g2.com/docs/developer-portal
   
+L.Ritoša (2026). eduToolSMART aplikacija
+ https://luka-ritosa.shinyapps.io/eduToolSMART/
 
+L.Ritoša (2026). GitHub link 
+ https://github.com/LukaRitosa/ZavrsniRad/
