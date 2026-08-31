@@ -361,5 +361,5 @@ G2API (2026). G2 Developer Portal.
 L.Ritoša (2026). eduToolSMART aplikacija
  https://luka-ritosa.shinyapps.io/eduToolSMART/
 
-L.Ritoša (2026). GitHub link 
+L.Ritoša (2026). GitHub repozitorij 
  https://github.com/LukaRitosa/ZavrsniRad/
