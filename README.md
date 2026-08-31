@@ -72,28 +72,35 @@ JMBAG: HR: 0303115039, redoviti student
 
 - [Literatura i izvori](#literatura-i-izvori)
 
-
+<p align="center">
 IZJAVA O AKADEMSKOJ ČESTITOSTI 
+</p>
 
 Ja, dolje potpisani Luka Ritoša kandidat za prvostupnika Informatike ovime izjavljujem da je ovaj Završni rad rezultat isključivo mojega vlastitog rada, da se temelji na mojim istraživanjima te da se oslanja na objavljenu literaturu kao što to pokazuju korištene bilješke i bibliografija. Izjavljujem da niti jedan dio Završnog rada nije napisan na nedozvoljen način, odnosno da je prepisan iz kojega necitiranog rada, te da ikoji dio rada krši bilo čija autorska prava. Izjavljujem, također, da nijedan dio rada nije iskorišten za koji drugi rad pri bilo kojoj drugoj visokoškolskoj, znanstvenoj ili radnoj ustanovi.
 
 <p align="right">
  Student
- 
+</p>
+ <p align="right">
  Luka Ritoša
 </p>
 
 U Puli, Rujan, 2026. godine
 
+<p align="center">
 IZJAVA o korištenju autorskog djela 
+</p>
 
 Ja, Luka Ritoša dajem odobrenje Sveučilištu Jurja Dobrile u Puli, kao nositelju prava iskorištavanja, da moj završni rad pod nazivom Shiny aplikacija za pomoć pri odabiru digitalnih alata za edukaciju koristeći SMART metodu koristi na način da gore navedeno autorsko djelo, kao cjeloviti tekst trajno objavi u javnoj internetskoj bazi Sveučilišne knjižnice Sveučilišta Jurja Dobrile u Puli te kopira u javnu internetsku bazu završnih radova Nacionalne i sveučilišne knjižnice (stavljanje na raspolaganje javnosti), sve u skladu s Zakonom o autorskom pravu i drugim srodnim pravima i dobrom akademskom praksom, a radi promicanja otvorenoga, slobodnoga pristupa znanstvenim informacijama. Za korištenje autorskog djela na gore navedeni način ne potražujem naknadu. 
 
 U Puli, 30.8.2026.
 
+<p align="right">
 Potpis
+</p>
+<p align="right">
 Luka Ritoša
-
+</p>
 ## Uvod
 
 **Dobra odluka** i dobar ishod imaju različito značenje. Dobra odluka može dovesti do lošeg ishoda, dok i loša odluka može dovesti do dobrog ishoda. No generalno je prihvaćeno da su dobre odluke često najbolji (i možda jedini) način za postizanje dobrih ishoda (Havranek i MacNair, 2023).
