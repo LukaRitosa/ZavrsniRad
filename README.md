@@ -18,11 +18,11 @@ JMBAG: HR: 0303115039, redoviti student
  
 **Predmet:** Operacijska Istraživanja
 
-**Znanstveno područje:** Društvene Znanosti
+**Znanstveno područje:** Društvene znanosti
 
 **Znanstveno polje:** Informacijske znanosti
 
-**Znanstvena grana:** Višekriterijsko odlučivanje
+**Znanstvena grana:** Organizacija i informatika
 
 **Mentor:** doc. dr. sc. Katarina Kostelić
 
