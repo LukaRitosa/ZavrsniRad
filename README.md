@@ -12,8 +12,6 @@
 
 **Akademska godina:** 2025/2026
 
-JMBAG: HR: 0303115039, redoviti student
-
 **Studijski smjer:** Informatika
  
 **Predmet:** Operacijska Istraživanja
